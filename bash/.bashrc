@@ -1,4 +1,4 @@
-#Stock bashrc file from Arch install
+# Stock bashrc file from Arch install
 
 if [ -f /etc/bash_completion ]; then
 	    . /etc/bash_completion
