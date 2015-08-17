@@ -1,8 +1,0 @@
-#!/bin/bash
-
-if [ "$(pidof i3)" ] 
-then
-      /usr/bin/termite -e 'ssh -t srsantos@ubuntu_server "mutt"'
-  else
-      /usr/bin/urxvtc -e ssh -t srsantos@ubuntu_server "mutt"
-fi

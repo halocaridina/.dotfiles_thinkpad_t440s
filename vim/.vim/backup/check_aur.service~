@@ -1,7 +1,0 @@
-[Unit]
-Description=Check AUR for updates (used in conjunction with a timer file)
-
-[Service]
-Type=simple
-ExecStart=/usr/local/bin/update_aur_notification.sh
-
