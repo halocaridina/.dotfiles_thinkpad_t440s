@@ -1,0 +1,14 @@
+[Unit]
+Description=notifications of Archlinux updates
+
+[Service]
+#Nice=19
+#IOSchedulingClass=2
+#IOSchedulingPriority=7
+#User=srsantos
+Type=simple
+Environment=DISPLAY=:0
+ExecStart=/usr/local/bin/update_arch_notification.sh
+
+[Install]
+WantedBy=multi-user.target

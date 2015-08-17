@@ -1,0 +1,29 @@
+[input-def]
+0=*
+
+[input2]
+0=
+1=/tmp/
+2=/sh://srsantos@131.204.120.103/home/srsantos/
+3=/tmp
+
+[cmdline]
+0=|
+1=
+
+[Dir Hist New Right Panel]
+0=/sh://srsantos@131.204.120.103/home/srsantos/Linux_stuff
+1=/sh://srsantos@131.204.120.103/home/srsantos/Linux_stuff/config_files
+2=/sh://srsantos@131.204.120.103/home/srsantos/Linux_stuff/config_files/bin
+3=/home/srsantos
+4=/sh://srsantos@131.204.120.166:10022/Users/srsantos/Desktop
+5=/sh://srsantos@131.204.120.103/home/srsantos
+
+[Dir Hist New Left Panel]
+0=/home/srsantos/.config/systemd/user
+1=/home/srsantos/.config/systemd
+2=/home/srsantos/.config
+3=/home/srsantos
+4=/home
+5=/
+6=/tmp

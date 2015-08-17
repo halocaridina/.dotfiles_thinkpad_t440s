@@ -1,0 +1,7 @@
+[Unit]
+Description=Check Manjuro repos for updates (used in conjunction with a timer file)
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/update_repo_notification.sh
+

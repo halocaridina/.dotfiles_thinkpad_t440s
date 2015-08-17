@@ -1,0 +1,10 @@
+[Unit]
+Description=Arch Update Notification
+
+[Service]
+ExecStart=/usr/local/bin/update_arch_notification.sh
+###Environment=DISPLAY=:0
+
+[Install]
+WantedBy=default.target
+

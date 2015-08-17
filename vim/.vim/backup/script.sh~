@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ "$(pidof i3)" ] 
+then
+      printf "i3 is running\n"
+  else
+      printf "i3 IS NOT running\n"
+fi

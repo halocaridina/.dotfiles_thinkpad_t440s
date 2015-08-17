@@ -1,0 +1,12 @@
+[Unit]
+Description=Run AUR update check 15 minutes after boot and daily
+
+[Timer]
+# Time to wait after booting before run for the first time
+OnBootSec=15min
+# Time between running each consecutive time
+OnUnitActiveSec=1d
+Unit=check_aur.service
+
+[Install]
+WantedBy=timers.target

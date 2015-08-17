@@ -1,0 +1,9 @@
+[user]
+	email = santos@auburn.edu
+	name = Scott R. Santos
+[color]
+	ui = true
+[core]
+	editor = vim
+[push]
+	default = simple

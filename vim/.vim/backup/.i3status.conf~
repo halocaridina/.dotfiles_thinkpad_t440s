@@ -1,0 +1,71 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+        colors = true
+        interval = 5
+}
+
+order += "disk /"
+order += "disk /home"
+order += "wireless wlp2s0"
+order += "ethernet enp3s0"
+order += "path_exists VPN"
+order += "battery 0"
+order += "cpu_temperature 0"
+order += "volume master"
+order += "tztime local"
+
+wireless wlp2s0 {
+        format_up = ": %ip (%quality @ %essid - %bitrate)"
+        format_down = ": down"
+}
+
+ethernet enp3s0 {
+        # if you use %speed, i3status requires root privileges
+        format_up = ": %ip (%speed)"
+        format_down = ": down"
+}
+
+battery 0 {
+        integer_battery_capacity = true
+        low_threshold = 20
+        threshold_type = percentage
+        format = ": %status %percentage %remaining"
+}
+
+path_exists VPN {
+        path = "/proc/sys/net/ipv4/conf/vpn0"
+        format = " %title: %status"
+}
+
+tztime local {
+        format = " %I:%M %p   %a-%d-%b"
+}
+
+disk "/" {
+        format = ": %avail"
+}
+
+disk "/home" {
+        format = ": %avail"
+}
+
+cpu_temperature 0 {
+        format = ": %degrees °C"
+        max_threshold = 70
+}
+
+volume master {
+        format = ":: %volume"
+        format_muted = ": muted (%volume)"
+        device = "default"
+        mixer = "Master"
+##        mixer_idx = 0
+}
+
