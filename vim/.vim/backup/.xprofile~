@@ -1,4 +1,4 @@
-# Blank the screen after 8 mins of inactivity
+# Blank the screen after 10 mins of inactivity
 /usr/bin/xset dpms 0 0 600
 
 # Increase the repeat rate of the keyboard
