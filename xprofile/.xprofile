@@ -16,5 +16,5 @@
 # Start compton for compositing
 /usr/bin/compton --config /home/srsantos/.config/compton/compton.conf &>/dev/null &
 
-# Set auto-suspend after 12 mins of inactivity
+# Set auto-suspend after 30 mins of inactivity
 /usr/bin/xautolock -time 30 -locker "systemctl suspend" -detectsleep &
