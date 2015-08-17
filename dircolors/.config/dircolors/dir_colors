@@ -1,7 +1,6 @@
 #
 # .dir_colors
 #
-
 TERM Eterm
 TERM ansi
 TERM color-xterm
