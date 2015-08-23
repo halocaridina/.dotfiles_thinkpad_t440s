@@ -185,7 +185,19 @@ herbstclient set tree_style '╾│ ├└╼─┐'
 #pids+=( $! )
 # wait until the panel should be stopped
 #herbstclient -w '(quit_panel|reload)'
-# stopp all started panels
+# stop all started panels
+#kill ${pids[@]}
+#} &
+
+# start i3status and kill/restart on hlwm reload
+#{
+#pids=( )
+# start the panel and remember its pid
+#i3status -c ~/.config/i3status/dzen2/config | dzen2 -fn "PragmataPro:size=8" &
+#pids+=( $! )
+# wait until the panel should be stopped
+#herbstclient -w '(quit_panel|reload)'
+# stop all started panels
 #kill ${pids[@]}
 #} &
 
