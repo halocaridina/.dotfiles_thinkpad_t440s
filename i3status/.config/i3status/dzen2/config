@@ -50,7 +50,6 @@ run_watch VPN {
         pidfile = "/var/run/NetworkManager/nm-vpnc-c4014199-aa4a-49a8-8918-c02c5c70b302.pid"
 }
 
-
 wireless _first_ {
         format_up = "^fn(FontAwesome:size=8)^fn(PragmataPro:size=8): %essid @ %quality (%ip)"
         format_down = ""
@@ -61,15 +60,13 @@ ethernet _first_ {
         format_down = "^fn(FontAwesome:size=8)"
 }
 
+
 battery 0 {
         low_threshold = 10
         threshold_type = "percentage"
         integer_battery_capacity = true
         hide_seconds = true
-        format = "^fn(PragmataPro:size=8)%status %percentage %remaining %consumption"
-        status_chr = "^fn(FontAwesome:size=8)^fn(PragmataPro:size=8:"
-        status_bat = "^fn(FontAwesome:size=8)^fn(PragmataPro:size=8:"
-        status_full = "^fn(FontAwesome:size=8)^fn(PragmataPro:size=8:"
+        format = "^fn(FontAwesome:size=8)^fn(PragmataPro:size=8): %status %percentage %remaining %consumption"
 }
 
 tztime local {
@@ -95,6 +92,5 @@ disk "/home" {
 
 cpu_temperature 0 {
         format = "^fn(fontello:size=8)^fn(PragmataPro:size=8): %degrees°C"
-#        path = "/sys/devices/platform/coretemp.0/temp2_input"
         path = "/sys/devices/platform/coretemp.0/hwmon/hwmon0/temp2_input"
 }
