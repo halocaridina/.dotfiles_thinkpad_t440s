@@ -23,4 +23,4 @@ progbar-align="100"
 nolirc="yes"
 format="s16le"
 #really-quiet="1"
-af=equalizer=0.0:0.0:0.0:0.0:0.0:0.0:0.0:0.0:0.0:0.0  #flat
+af=equalizer=2.4:2.4:1.4:0.0:-2.4:-3.4:-2.0:0.0:1.4:5.3  #soft rock
