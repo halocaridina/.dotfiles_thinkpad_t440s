@@ -20,9 +20,9 @@ fi
 [ -f ~/.xprofile ] && source ~/.xprofile
 
 # Load custom keymapping for X
-if [ -s ~/.Xmodmap ]; then
-    xmodmap ~/.Xmodmap
-fi
+#if [ -s ~/.Xmodmap ]; then
+#    xmodmap ~/.Xmodmap
+#fi
 
 # Start gnome-keyring-daemon
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
@@ -31,7 +31,7 @@ export SSH_AUTH_SOCK
 # Finally start a WM of your choice
 
 # start herbstluftwm and its panel
-# exec herbstluftwm --locked
+#exec herbstluftwm --locked
 
 # start i3 with log file (adjust config via -c as needed)
 # exec i3 -c /home/srsantos/.i3/bling.conf -V >> /tmp/i3log-$(date +'%F-%k-%M-%S') 2>&1
