@@ -5,7 +5,7 @@
 /usr/bin/xset r rate 400 44
 
 # disable trackpad while typing for a half second as "palm detection"
-/usr/bin/syndaemon -i 1.0 -d
+/usr/bin/syndaemon -i 0.5 -d
 
 # Turn off cap locks
 /usr/bin/setxkbmap -option caps:none
