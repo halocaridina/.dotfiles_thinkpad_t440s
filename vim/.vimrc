@@ -38,6 +38,8 @@ Plugin 'bling/vim-airline'
 
 Plugin 'smancill/conky-syntax.vim'
 
+Plugin 'vim-airline/vim-airline-themes'
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 
