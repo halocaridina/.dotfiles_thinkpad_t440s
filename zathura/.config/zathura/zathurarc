@@ -5,7 +5,7 @@ set scroll-wrap false
 set abort-clear-search true
 set highlight-color "#FFFF00"
 set highlight-active-color "#FF0000"
-set database "null"
+#set database "null"
 # COLORIZE THE PDF ITSELF
 # set recolor-darkcolor "#93A1A1"
 # set recolor-lightcolor "#002B36"
