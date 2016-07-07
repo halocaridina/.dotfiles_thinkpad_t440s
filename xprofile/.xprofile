@@ -4,8 +4,8 @@
 # Increase the repeat rate of the keyboard
 /usr/bin/xset r rate 400 44
 
-# disable trackpad while typing for a half second as "palm detection"
-/usr/bin/syndaemon -i 0.5 -d
+# disable trackpad while typing for a quarter second as "palm detection"
+/usr/bin/syndaemon -i 0.25 -d
 
 # Turn off cap locks
 /usr/bin/setxkbmap -option caps:none
