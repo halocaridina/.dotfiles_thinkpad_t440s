@@ -4,14 +4,15 @@
 # Increase the repeat rate of the keyboard
 /usr/bin/xset r rate 400 44
 
-# disable trackpad while typing for a quarter second as "palm detection"
-/usr/bin/syndaemon -i 0.25 -d
-
 # Turn off cap locks
 /usr/bin/setxkbmap -option caps:none
 
 # Enable killing X via key combo
 /usr/bin/setxkbmap -option terminate:ctrl_alt_bksp
+
+# libinput options to set up the trackpad the way I like it
+/usr/bin/xinput --set-prop 12 280 0.70 ### Set accleration speed
+/usr/bin/xinput --set-prop 12 274 1 ### Enable Tap
 
 # Set auto-suspend after 30 mins of inactivity
 /usr/bin/xautolock -time 30 -locker "systemctl suspend" -detectsleep &
