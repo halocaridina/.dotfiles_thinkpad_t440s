@@ -1,0 +1,8 @@
+bin
+share/webkit/databases
+share/recently-used.xbel
+share/mc/history
+share/keyrings
+share/zathura/*
+share/xorg/*
+share/applications/*
