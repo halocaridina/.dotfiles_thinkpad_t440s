@@ -11,7 +11,7 @@
 /usr/bin/setxkbmap -option terminate:ctrl_alt_bksp
 
 # libinput options to set up the trackpad the way I like it
-/usr/bin/xinput --set-prop 12 280 0.70 ### Set accleration speed
+/usr/bin/xinput --set-prop 12 280 0.80 ### Set accleration speed
 /usr/bin/xinput --set-prop 12 274 1 ### Enable Tap
 
 # Set auto-suspend after 30 mins of inactivity
