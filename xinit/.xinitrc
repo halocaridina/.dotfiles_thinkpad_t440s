@@ -28,16 +28,21 @@ fi
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
 
-# Finally start a WM of your choice
-
-# start herbstluftwm and its panel
-#exec herbstluftwm --locked
-
-# start i3 with log file (adjust config via -c as needed)
-# exec i3 -c /home/srsantos/.i3/bling.conf -V >> /tmp/i3log-$(date +'%F-%k-%M-%S') 2>&1
-
-# start i3 with "minimal" set up (minimal bar, no update notifications, etc)
-# exec i3 -c /home/srsantos/.i3/bones.conf
-
-# start i3 with "default" set-up
-exec i3 -c /home/srsantos/.i3/bling.conf
+# Finally start a WM of your choice, with i3 bling being the default
+case $WM in
+i3)
+	/usr/bin/i3 -c /home/srsantos/.i3/bling.conf
+	;;
+i3-bones)
+	/usr/bin/i3 -c /home/srsantos/.i3/bones.conf
+	;;
+i3-debug)
+	/usr/bin/i3 -c /home/srsantos/.i3/bling.conf -V >> /tmp/i3log-$(date +'%F-%k-%M-%S') 2>&1
+	;;
+herb)
+	/usr/bin/herbstluftwm --locked
+	;;
+*)
+	/usr/bin/i3 -c /home/srsantos/.i3/bling.conf
+	;;
+esac
