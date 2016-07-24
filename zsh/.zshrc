@@ -8,13 +8,13 @@ export ZSH=$HOME/.config/oh-my-zsh
 ZSH_THEME="candy"
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=7
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -78,3 +78,9 @@ export SSH_KEY_PATH="~/.ssh/id_rsa"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+if [ $TERM = "linux" ]; then
+      # simple prompt when in TTY
+    PROMPT='%B%t%b %n@%m:%0~ $ '
+fi
+
