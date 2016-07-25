@@ -25,6 +25,7 @@ hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-e close_or_remove
 hc keybind $Mod-Return spawn termite
 hc keybind $Mod-d spawn rofi -show run
+hc keybind $Mod-Shift-n spawn nmcli_dmenu
 
 # basic movement
 # focusing clients
