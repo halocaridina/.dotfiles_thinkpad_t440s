@@ -9,9 +9,9 @@ hc pad 0 16 0 0 0
 hc emit_hook reload
 
 # autostart programs
-/usr/bin/setroot /home/srsantos/.i3/wallpapers/ArchDarkFl526c.png
-/usr/local/bin/xvisbell &
-/usr/bin/xss-lock -- /usr/bin/i3lock -b -e -f -i /home/srsantos/.i3/wallpapers/ArchDarkFl526c_lockscreen.png &
+/usr/bin/setroot /home/srsantos/.i3/wallpapers/herb.png
+/usr/bin/xvisbell &
+/usr/bin/xss-lock -- /usr/bin/i3lock -b -e -f -i /home/srsantos/.i3/wallpapers/herb.png &
 
 # remove all existing keybindings
 hc keyunbind --all
@@ -52,6 +52,7 @@ hc keybind $Mod-Shift-l     shift right
 # create an empty frame at the specified direction
 hc keybind $Mod-h       split   bottom  0.5
 hc keybind $Mod-v       split   right   0.5
+
 # let the current frame explode into subframes
 hc keybind $Mod-Control-space split explode
 
@@ -86,8 +87,8 @@ hc keybind $Mod-comma  use_index -1 --skip-visible
 
 # layouting
 hc keybind $Mod-r remove
-# hc keybind $Mod-space cycle_layout 1
-# hc keybind $Mod-s floating toggle
+hc keybind $Mod-space cycle_layout 1
+hc keybind $Mod-s floating toggle
 hc keybind $Mod-Shift-space floating toggle
 hc keybind $Mod-f fullscreen toggle
 hc keybind $Mod-p pseudotile toggle
