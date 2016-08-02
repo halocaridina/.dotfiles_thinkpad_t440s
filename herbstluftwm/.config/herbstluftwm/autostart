@@ -129,7 +129,7 @@ hc keybind $Mod-b spawn /usr/bin/xombrero
 # theme
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
-hc set frame_border_active_color orange
+hc set frame_border_active_color '#00CCCC'
 hc set frame_border_normal_color '#396EB4'
 hc set frame_bg_normal_color '#396EB4'
 hc set frame_bg_active_color '#396EB4'
@@ -148,7 +148,7 @@ hc attr theme.border_width 1
 hc attr theme.floating.border_width 1
 hc attr theme.floating.outer_width 1
 hc attr theme.floating.outer_color black
-hc attr theme.active.inner_color '#00FFFF'
+hc attr theme.active.inner_color '#007F7F'
 hc attr theme.active.outer_color '#396EB4'
 hc attr theme.background_color '#141414'
 
