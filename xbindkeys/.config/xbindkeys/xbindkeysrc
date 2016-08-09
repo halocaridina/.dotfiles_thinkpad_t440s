@@ -2,13 +2,13 @@
 # MX Master Settings #
 ######################
 
-# thumb wheel down => previous tab
-#"xte 'keydown Super_L' 'key comma' 'keyup Super_L'"
-#    b:6
+# thumb wheel up => change browser tab to right
+"xte 'keydown Control_L' 'key Right' 'keyup Control_L'"
+    b:6
 
-# thumb wheel up => next tab
-#"xte 'keydown Super_L' 'key period' 'keyup Super_L'"
-#    b:7
+# thumb wheel down => change browser tab to left
+"xte 'keydown Control_L' 'key Left' 'keyup Control_L'"
+    b:7
 
 # backward button => previous i3 workspace
 "xte 'keydown Super_L' 'key comma' 'keyup Super_L'"
