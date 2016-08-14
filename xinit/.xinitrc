@@ -30,6 +30,9 @@ export SSH_AUTH_SOCK
 
 # Finally start a WM of your choice, with i3 bling being the default
 case $WM in
+herb)
+›   /usr/bin/herbstluftwm --locked
+›   ;;
 i3)
 	/usr/bin/i3 -c /home/srsantos/.i3/bling.conf
 	;;
@@ -38,9 +41,6 @@ i3-bones)
 	;;
 i3-debug)
 	/usr/bin/i3 -c /home/srsantos/.i3/bling.conf -V >> /tmp/i3log-$(date +'%F-%k-%M-%S') 2>&1
-	;;
-herb)
-	/usr/bin/herbstluftwm --locked
 	;;
 *)
 	/usr/bin/i3 -c /home/srsantos/.i3/bling.conf
