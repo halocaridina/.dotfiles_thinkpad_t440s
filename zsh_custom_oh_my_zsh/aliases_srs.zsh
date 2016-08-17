@@ -1,1 +1,0 @@
-/home/srsantos/.config/oh-my-zsh/custom/aliases_srs.zsh
