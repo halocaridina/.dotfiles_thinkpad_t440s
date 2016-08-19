@@ -3,7 +3,6 @@ advancemenu
 arc-icon-theme-git
 bashmount
 chromium-pepper-flash
-chromium-widevine
 compton-git
 cower
 datamash
@@ -15,8 +14,6 @@ gnome-colors-icon-theme-extras
 gtk-theme-arc-git
 i3-gaps-git
 i3pystatus-git
-inox-bin
-light-git
 localtime-git
 mandb-ondemand
 networkmanager-dmenu-git
@@ -30,7 +27,7 @@ python-pyalsaaudio-git
 rofi-surfraw-git
 screenfetch-git
 setroot-git
-solaar
+solaar-git
 termite-git
 tmux-mem-cpu-load-git
 ttf-font-awesome
