@@ -2,15 +2,14 @@ advancemame
 advancemenu
 arc-icon-theme-git
 bashmount
-chromium-pepper-flash
 compton-git
 cower
 datamash
 evrouter
 flip
-freshplayerplugin-git
 gnome-colors-icon-theme
 gnome-colors-icon-theme-extras
+google-chrome
 gtk-theme-arc-git
 i3-gaps-git
 i3pystatus-git
@@ -27,7 +26,7 @@ python-pyalsaaudio-git
 rofi-surfraw-git
 screenfetch-git
 setroot-git
-solaar-git
+solaar
 termite-git
 tmux-mem-cpu-load-git
 ttf-font-awesome

@@ -74,6 +74,7 @@ jfsutils
 less
 libbsd
 libtool
+libu2f-host
 libva-intel-driver
 licenses
 linux
