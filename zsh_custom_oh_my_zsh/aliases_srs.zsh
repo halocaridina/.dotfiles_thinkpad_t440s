@@ -34,6 +34,8 @@ alias uv='ssh uv'
 
 alias open_secure_sd='sudo cryptsetup luksOpen /dev/mmcblk0p1 secure_sd'
 alias close_secure_sd='sudo cryptsetup luksClose secure_sd'
+alias open_secure_usb='sudo cryptsetup luksOpen /dev/sdc secure_usb'
+alias close_secure_usb='sudo cryptsetup luksClose secure_usb'
 
 alias battery_level='cat /sys/class/power_supply/BAT0/uevent | grep POWER_SUPPLY_CAPACITY='
 alias i3_exit='i3-msg exit'
@@ -56,6 +58,22 @@ export EDITOR='vim'
 export GCC_COLORS='error=01;38;5;160:warning=01;38;5;220:note=01;38;5;10:caret=01;38;5;33:locus=01:quote=01'
 export GREP_OPTIONS=
 export GREP_COLORS='fn=00;38;5;33:mc=00;36:ms=31:mt=01;38;5;200:ln=01;38;5;14'
+
+##################################################################################
+
+## Set SSH to use gpg-agent
+unset SSH_AGENT_PID
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+  export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
+fi
+
+# Set GPG TTY
+export GPG_TTY=$(tty)
+
+# Refresh gpg-agent tty in case user switches into an X session
+gpg-connect-agent updatestartuptty /bye >/dev/null
+
+#  ###################################################################################
 
 # History
 ##
