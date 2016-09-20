@@ -3,6 +3,7 @@ acpi
 alsa-plugins
 alsa-utils
 arandr
+arch-install-scripts
 aspell-en
 atool
 autoconf
@@ -52,6 +53,7 @@ gnome-themes-standard
 gnumeric
 gnu-netcat
 gpicview
+gptfdisk
 grep
 groff
 grub
@@ -123,6 +125,7 @@ pcmciautils
 perl
 pkgbuild-introspection
 pkg-config
+pkgfile
 procps-ng
 psmisc
 pv
@@ -190,6 +193,7 @@ xorg-xkill
 xorg-xprop
 xorg-xwininfo
 yajl
+yubico-pam
 zathura-pdf-mupdf
 zathura-ps
 zip
