@@ -112,7 +112,7 @@ DISK_IOSCHED="bfq bfq"
 # SATA aggressive link power management (ALPM):
 #   min_power, medium_power, max_performance
 SATA_LINKPWR_ON_AC=max_performance
-SATA_LINKPWR_ON_BAT=max_performance
+SATA_LINKPWR_ON_BAT=min_power
 
 # Exclude SATA host devices from link power management.
 # Separate multiple hosts with spaces.
