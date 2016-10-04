@@ -22,6 +22,8 @@ Plugin 'ervandew/supertab'
 
 Plugin 'flazz/vim-colorschemes'
 
+Plugin 'chriskempson/base16-vim'
+
 Plugin 'scrooloose/nerdtree'
 
 Plugin 'Lokaltog/vim-easymotion'
