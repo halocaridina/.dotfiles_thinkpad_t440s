@@ -4,5 +4,5 @@ URxvt*font: xft:PragmataPro:size=10, xft:PragmataPro\ for\ Powerline:size=10
 URxvt*boldFont: xft:PragmataPro:size=10:bold, xft:PragmataPro\ for\ Powerline:size=10:bold
 URxvt*italicFont: xft:PragmataPro:size=10:italic, xft:PragmataPro\ for\ Powerline:size=10:italic
 URxvt*boldItalicFont: xft:PragmataPro:size=10:bold:italic, xft:PragmataPro\ for\ Powerline:size=10:bold:italic
-URxvt*letterSpace: -2
+URxvt*letterSpace: -1
 URxvt.lineSpace: -1
