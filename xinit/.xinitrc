@@ -25,24 +25,26 @@ fi
 #fi
 
 # Start gnome-keyring-daemon
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets)
-export SSH_AUTH_SOCK
+#eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets)
+#export SSH_AUTH_SOCK
 
 # Finally start a WM of your choice, with i3 bling being the default
-case $WM in
-herb)
-›   exec /usr/bin/herbstluftwm --locked
-›   ;;
-i3)
-	exec /usr/bin/i3 -c /home/srsantos/.i3/bling.conf
-	;;
-i3-bones)
-	exec /usr/bin/i3 -c /home/srsantos/.i3/bones.conf
-	;;
-i3-debug)
-	exec /usr/bin/i3 -c /home/srsantos/.i3/bling.conf -V >> /tmp/i3log-$(date +'%F-%k-%M-%S') 2>&1
-	;;
-*)
-	exec /usr/bin/i3 -c /home/srsantos/.i3/bling.conf
-	;;
-esac
+#case $WM in
+#herb)
+#	exec /usr/bin/herbstluftwm --locked
+#	;;
+#i3)
+#	exec /usr/bin/i3 -c /home/srsantos/.i3/bling.conf
+#	;;
+#i3-bones)
+#	exec /usr/bin/i3 -c /home/srsantos/.i3/bones.conf
+#	;;
+#i3-debug)
+#	exec /usr/bin/i3 -c /home/srsantos/.i3/bling.conf -V >> /tmp/i3log-$(date +'%F-%k-%M-%S') 2>&1
+#	;;
+#*)
+#	exec /usr/bin/i3 -c /home/srsantos/.i3/bling.conf
+#	;;
+#esac
+
+#exec /usr/bin/termite

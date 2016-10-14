@@ -23,6 +23,22 @@ export HISTCONTROL=ignoreboth
 export JAVA_FONTS=/usr/share/fonts/TTF
 export EDITOR=/usr/bin/nano
 
+##################################################################################
+
+## Set SSH to use gpg-agent
+unset SSH_AGENT_PID
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+  export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
+fi
+
+## Set GPG TTY
+export GPG_TTY=$(tty)
+
+## Refresh gpg-agent tty in case user switches into an X session
+gpg-connect-agent updatestartuptty /bye >/dev/null
+
+##################################################################################
+
 #alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias l='ls -l --group-directories-first --color=auto -F'
 alias ll='ls -lha --group-directories-first --color=auto -F'

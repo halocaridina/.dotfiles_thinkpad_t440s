@@ -1,0 +1,26 @@
+#*****************************************************************#
+# Set the Prezto modules to load (browse modules).
+# The order matters.
+zstyle ':prezto:load' pmodule \
+  'environment' \
+  'terminal' \
+  'editor' \
+  'history' \
+  'directory' \
+  'utility' \
+  'completion' \
+  'git' \
+  'prompt' \
+  'syntax-highlighting' \
+  'history-substring-search' \
+  'prompt' \
+
+# Set prompt
+zstyle ':prezto:module:prompt' theme 'paradox_santos'
+
+# Set the key mapping style to 'emacs' or 'vi'.
+zstyle ':prezto:module:editor' key-bindings 'vi'
+
+# Auto start a session when Zsh is launched in a SSH connection.
+zstyle ':prezto:module:tmux:auto-start' remote 'yes'
+#*****************************************************************#
