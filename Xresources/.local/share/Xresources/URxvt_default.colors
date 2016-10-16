@@ -2,7 +2,7 @@
 URxvt.intensityStyles: true
 
 URxvt*depth: 32
-URxvt*background: rgba:40/40/40/0.8
+URxvt*background: [80]#282828
 URxvt*foreground: #babdb6
 URxvt*cursorColor: #babdb6
 

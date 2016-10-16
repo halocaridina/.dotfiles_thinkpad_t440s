@@ -2,9 +2,9 @@
 !URxvt*depth: 32
 
 ! Enable transparency and blurring
-URxvt*transparent: true
-URxvt*shading: 15
-URxvt*blurRadius: 5
+!URxvt*transparent: true
+!URxvt*shading: 15
+!URxvt*blurRadius: 5
 
 ! Compile xft: Turn on/off double-buffering for xft (default enabled).  On some card/driver combination enabling it slightly decreases performance, on most
 URxvt*buffered: true
@@ -133,7 +133,7 @@ URxvt*saveLines: 65535
 URxvt*internalBorder: 3
 
 ! External border of number pixels. This resource is limited to 100; option -w, -bw, -borderwidth.
-URxvt*externalBorder: 3
+URxvt*externalBorder: 0
 
 ! Set MWM hints to request a borderless window, i.e. if honoured by the WM, the rxvt-unicode window will not have window decorations; option -bl.
 ! URxvt*borderLess: boolean
