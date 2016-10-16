@@ -32,7 +32,7 @@ browser = xombrero
 # (default if unset: all graphic non-punctuation/space characters)
 #word_chars = -A-Za-z0-9,./?%&#:_=+@~
 
-[colors]
+#[colors]
 #background = rgba(20, 30, 30, 0.70)
 #foreground      = #DDDDDD
 #foreground_bold = #DDDDDD
@@ -103,8 +103,10 @@ color3  = #c4a000
 color11 = #fce94f
 
 # blue
-color4  = #3465a4
-color12 = #729fcf
+color4 = #1793d1
+color12 = #1793d1
+#color4  = #3465a4
+#color12 = #729fcf
 
 # magenta
 color5  = #75507b
