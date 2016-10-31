@@ -37,6 +37,8 @@ printinfo () {
     info "GPU" gpu
     info "Memory" memory
     info "Disk" disk
+    info "Local IP" localip
+    info "Public IP" publicip
     info "Battery" battery
 
     # info "CPU Usage" cpu_usage
