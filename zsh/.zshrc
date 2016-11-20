@@ -55,7 +55,7 @@ if [[ -n $SSH_CONNECTION ]]; then
 
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/opt/edirect:$HOME/bin:/usr/local/bin:$PATH
 export MANPATH="/usr/local/man:$MANPATH"
 
 # enable color support of ls and file types
@@ -150,3 +150,10 @@ export GPG_TTY=$(tty)
 gpg-connect-agent updatestartuptty /bye >/dev/null
 
 ##################################################################################
+
+## Fan control
+function fan() {
+  sensors
+  echo level $@ | sudo tee /proc/acpi/ibm/fan
+}
+

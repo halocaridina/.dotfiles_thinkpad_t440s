@@ -47,4 +47,4 @@ fi
 #	;;
 #esac
 
-#exec /usr/bin/termite
+##exec /usr/bin/urxvtc

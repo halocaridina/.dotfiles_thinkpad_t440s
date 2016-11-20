@@ -5,7 +5,7 @@ if [ -n "$DESKTOP_SESSION" ]; then
 fi
 
 # Start the rxvt daemon in the background
-/usr/bin/urxvtd -q -f -o
+#/usr/bin/urxvtd -q -f -o
 
 # Blank the screen after 10 mins of inactivity
 /usr/bin/xset dpms 0 0 600

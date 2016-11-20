@@ -296,7 +296,7 @@ progress_color_total="distro"
 # --battery_display bar/infobar/barinfo/off
 # --disk_display bar/infobar/barinfo/off
 memory_display="off"
-battery_display="off"
+battery_display="infobar"
 disk_display="off"
 
 
