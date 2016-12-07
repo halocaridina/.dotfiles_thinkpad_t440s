@@ -167,7 +167,7 @@ color15 = #eeeeec
 #color15 = #DBDDE4
 
 [hints]
-font = Monospace 12
+font = PragmataPro 12
 foreground = #dcdccc
 background = #3f3f3f
 padding = 2

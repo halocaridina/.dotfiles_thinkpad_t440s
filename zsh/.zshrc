@@ -94,6 +94,7 @@ alias pacimpl="pacman -D --asdep"    # Mark one or more installed packages as no
 
 alias l='ls -Flh'
 alias ll='ls -Falh'
+alias history='history -E'
 
 alias mnt_office_intel="sshfs srsantos@office_intel:/Users/srsantos /home/srsantos/Documents/Remote_FS/Office_intel && /usr/bin/notify-send -u low 'Remote FS Mounted' 'Now accessible.' -i /usr/share/icons/gnome-colors-common/scalable/places/network-server.svg"
 alias mnt_ubuntu_server="sshfs srsantos@ubuntu_server:/home/srsantos /home/srsantos/Documents/Remote_FS/Ubuntu_server && /usr/bin/notify-send -u low 'Remote FS Mounted' 'Now accessible.' -i /usr/share/icons/gnome-colors-common/scalable/places/network-server.svg"
