@@ -1,5 +1,5 @@
 # GENERAL BEHAVIORS
-set font "PragmataPro 9"
+set font "PragmataPro Bold 10.5"
 set adjust-open width
 set scroll-wrap false
 set abort-clear-search true
