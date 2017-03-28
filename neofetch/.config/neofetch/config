@@ -36,7 +36,7 @@ printinfo () {
     info "CPU" cpu
     info "GPU" gpu
     info "Memory" memory
-    info "Disk" disk
+    info "Disks" disk
     info "Local IP" localip
     info "Public IP" publicip
     info "Battery" battery
@@ -54,6 +54,9 @@ printinfo () {
     info linebreak
     info cols
 }
+
+# Disks
+disk_show=('/' '/home')
 
 
 # Kernel
