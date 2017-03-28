@@ -56,7 +56,7 @@ printinfo () {
 }
 
 # Disks
-disk_show=('/' '/home')
+disk_show=('/' '/home' '/boot')
 
 
 # Kernel
