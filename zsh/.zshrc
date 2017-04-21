@@ -120,6 +120,8 @@ alias screenfetch='neofetch'
 
 alias rm_DS_Stores='find . -name ".DS_Store" -delete'
 
+alias pulseaudio-ctl='/usr/local/bin/pulseaudio-ctl_local'
+
 alias music_mpv='mpv --no-video'
 alias music_mpv_random_playlist='mpv --no-video --shuffle --playlist <(find "$PWD" -type f)'
 
