@@ -30,8 +30,6 @@ Plugin 'Lokaltog/vim-easymotion'
 
 Plugin 'sjl/gundo.vim'
 
-Plugin 'edsono/vim-matchit'
-
 Plugin 'SearchComplete'
 
 Plugin 'PotatoesMaster/i3-vim-syntax'
