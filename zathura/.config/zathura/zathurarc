@@ -1,11 +1,12 @@
 # GENERAL BEHAVIORS
-set font "PragmataPro Bold 10.5"
+set font "xos4 Terminus 10"
 set adjust-open width
 set scroll-wrap false
 set abort-clear-search true
 set highlight-color "#FFFF00"
 set highlight-active-color "#FF0000"
 set database "null"
+set guioptions "s"
 # COLORIZE THE PDF ITSELF
 # set recolor-darkcolor "#93A1A1"
 # set recolor-lightcolor "#002B36"
