@@ -17,7 +17,8 @@ xterm*backarrowKey: false
 xterm*ttyModes: erase ^?
 xterm*scrollTtyOutput: false
 
-xterm*faceName:  PragmataPro for Powerline:antialias=false
+xterm*faceName: xos4 Terminus:antialias=false
+xterm*allowBoldFonts: false
 xterm*faceSize:  10
 xterm*faceSize1: 7
 xterm*faceSize2: 8
@@ -25,8 +26,6 @@ xterm*faceSize3: 9
 xterm*faceSize4: 11
 xterm*faceSize5: 12
 xterm*faceSize6: 14
-!xterm*faceName: Terminess Powerline
-!xterm*faceSize: 10
 
 xterm*visualbell: true
 xterm*bellIsUrgent: true
