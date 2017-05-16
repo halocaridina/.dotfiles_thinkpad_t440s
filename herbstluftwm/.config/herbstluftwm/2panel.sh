@@ -5,16 +5,17 @@
 monitor=${1:-0}
 
 ########## OPTIONS ##########
-panel_height=15
-font="-*-fixed-medium-*-*-*-12-*-*-*-*-*-*-*"
-bgcolor=$(herbstclient get frame_border_normal_color)
-selbg=$(herbstclient get window_border_active_color)
+panel_height=20
+font="-*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*"
+#bgcolor=$(herbstclient get frame_border_normal_color)
+bgcolor='#222222'
+#selbg=$(herbstclient get window_border_active_color)
+selbg='#396EB4'
 selfg='#101010'
 bordercolor="#26221C"
 sep="^bg()^fg($selbg)|"
 host=$(hostname)
-
-net_dev="wlan0"
+net_dev="wlp3s0"
 
 ########## VARIABLES ##########
 geometry=( $(herbstclient monitor_rect "$monitor") )
@@ -90,18 +91,21 @@ net_widget() {
         head -n 1 |
         awk '{print $1}'
     )
-    echo -n "W $ip ($ssid)"
+    dzen_icons="/home/srsantos/.config/herbstluftwm/icons"
+    wifi_icon="$dzen_icons/wifi.xbm"
+    echo -n "^i($wifi_icon) $ip ($ssid)"
 }
 
 volume_widget() {
-    dzen_icons="/home/chancez/Pictures/dzen_icons"
-    curr_volume=$(echo $volume | cut -d " " -f2)
-    if [ "$1" == "toggle" ] && [ "$curr_volume" != "Mute" ]; then
-        volume="Mute"
-        vol_icon="$dzen_icons/volume_off.xbm"
+    dzen_icons="/home/srsantos/.config/herbstluftwm/icons"
+    curr_volume=$(/usr/local/bin/pulseaudio-ctl_local full-status)
+    mute=`/usr/local/bin/pulseaudio-ctl_local full-status | awk '{print $2}'`
+    if [ ${mute} == "yes" ]; then
+        volume="M"
+        vol_icon="$dzen_icons/volume_0.xbm"
     else
-        volume=$(amixer get Master | grep -Po '\d+\%' | head -1)
-        vol_icon="$dzen_icons/volume_on.xbm"
+        volume=$(/usr/local/bin/pulseaudio-ctl_local full-status | awk '{print $1}')
+        vol_icon="$dzen_icons/volume_100.xbm"
     fi
     echo "^i($vol_icon) $volume"
 }
@@ -114,7 +118,7 @@ herbstclient pad $monitor $panel_height
     # events:
     # Clock
     while true ; do
-        date +'date ^fg(#efefef)%H:%M:%S^fg(#909090), %Y-%m-^fg(#efefef)%d'
+        date +'date ^fg(#efefef)%I:%M %p^fg(#909090), %Y-%m-^fg(#efefef)%d'
         sleep 1 || break
     done > >(uniq_linebuffered)  &
     childpid1=$!
@@ -177,7 +181,7 @@ herbstclient pad $monitor $panel_height
         right_text_only=$(echo -n "$right"|sed 's.\^[^(]*([^)]*)..g')
         # get width of right aligned text.. and add some space..
         width=$($textwidth "$font" "$right_text_only")
-        offset=14 #14 for the one icon im using that isnt counted
+        offset=30 #14 for the one icon im using that isnt counted
         echo -n "^pa($(($panel_width - $width - $offset)))$right"
 
         # Finish output
@@ -223,5 +227,5 @@ herbstclient pad $monitor $panel_height
                 echo "Unknown event!" >&2
         esac
         done
-} | dzen2 -w $panel_width -x $x -y $y -fn "$font" -h $panel_height \
+} | dzen2 -w $panel_width -x $x -y $y -fn "xos4 Terminus:size=12" -h $panel_height \
     -ta l -bg "$bgcolor" -fg '#efefef'

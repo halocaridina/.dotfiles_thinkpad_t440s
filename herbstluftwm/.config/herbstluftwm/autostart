@@ -23,9 +23,9 @@ Mod=Mod4   # Use the super key as the main modifier
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-e close_or_remove
-hc keybind $Mod-Return spawn termite
-hc keybind $Mod-d spawn rofi -show run
-hc keybind $Mod-Shift-n spawn nmcli_dmenu
+hc keybind $Mod-Return spawn /usr/bin/termite
+hc keybind $Mod-d spawn SSH_AUTH_SOCK=/run/user/1000/gnupg/S.gpg-agent.ssh /usr/bin/rofi -show run
+hc keybind $Mod-Shift-n spawn /usr/bin/networkmanager_dmenu 
 
 # basic movement
 # focusing clients
@@ -111,16 +111,17 @@ hc keybind $Mod-c cycle
 hc keybind $Mod-i jumpto urgent
 
 # keybindings for hotkeys
-hc keybind XF86AudioRaiseVolume spawn /usr/bin/amixer -q sset Master 5%+ unmute
-hc keybind XF86AudioLowerVolume spawn /usr/bin/amixer -q sset Master 5%- unmute
-hc keybind XF86AudioMute spawn /usr/bin/amixer -q sset Master toggle
-hc keybind XF86AudioMicMute spawn /usr/local/bin/mic_toggle.sh
-hc keybind XF86MonBrightnessUp spawn /usr/bin/xbacklight -inc 15
-hc keybind XF86MonBrightnessDown spawn /usr/bin/xbacklight -dec 15
-hc keybind XF86Sleep spawn /usr/bin/systemctl suspend
-hc keybind XF86WLAN spawn /usr/local/bin/wifi_rfkill_button_toggle.sh
-hc keybind XF86Search spawn /usr/bin/termite --geometry=1200x540 --title=glances -e "glances -1"
-hc keybind Menu spawn /usr/local/bin/touchpad_toggle.sh
+hc keybind XF86AudioRaiseVolume spawn /usr/local/bin/pulseaudio-ctl_local up
+hc keybind XF86AudioLowerVolume spawn /usr/local/bin/pulseaudio-ctl_local down
+hc keybind XF86AudioMute spawn /usr/local/bin/pulseaudio-ctl_local mute
+hc keybind XF86AudioMicMute spawn /usr/local/bin/pulseaudio-ctl_local mute-input
+hc keybind XF86MonBrightnessUp spawn /usr/local/bin/brightness_indicator.sh up
+hc keybind XF86MonBrightnessDown spawn /usr/local/bin/brightness_indicator.sh down
+hc keybind XF86Display spawn /usr/bin/arandr
+hc keybind XF86Search spawn /usr/bin/termite --title=glances -e "glances -1"
+hc keybind XF86Tools spawn /usr/local/bin/touchpad_toggle.sh
+hc keybind XF86Explorer spawn /usr/bin/lxappearance
+hc keybind XF86LaunchA spawn /usr/bin/pulseaudio-equalizer-gtk
 hc keybind Print spawn /usr/bin/scrot '%Y-%m-%d-%T_$wx$h_scrot.png' -e 'mv $f ~/Pictures/screenshots/'
 
 # keybinding for browser
@@ -173,7 +174,6 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 
 # tag rules
 
-
 # unlock, just to be sure
 hc unlock
 
@@ -203,7 +203,6 @@ herbstclient set tree_style '╾│ ├└╼─┐'
 #kill ${pids[@]}
 #} &
 
-
 # do multi monitor setup here, e.g.:
 # hc set_monitors 1280x1024+0+0 1280x1024+1280+0
 # or simply:
@@ -211,7 +210,7 @@ herbstclient set tree_style '╾│ ├└╼─┐'
 
 # find the panel
 panel=~/bin/bar.sh
-[ -x "$panel" ] || panel=/home/srsantos/.config/herbstluftwm/panel.sh
+[ -x "$panel" ] || panel=/home/srsantos/.config/herbstluftwm/2panel.sh
 for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
     # start it on each monitor
     "$panel" $monitor &
