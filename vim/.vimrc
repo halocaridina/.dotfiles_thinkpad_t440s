@@ -40,6 +40,8 @@ Plugin 'smancill/conky-syntax.vim'
 
 Plugin 'vim-airline/vim-airline-themes'
 
+Plugin 'dikiaap/minimalist'
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 
@@ -129,8 +131,12 @@ if has('statusline')
 endif
 
 " Set the status bar using the airline plugin
-:let g:airline_theme='raven'
+":let g:airline_theme='raven'
+"let g:airline_powerline_fonts = 1
+
+let g:airline_theme='minimalist'
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 set backspace=indent,eol,start
 set linespace=0
