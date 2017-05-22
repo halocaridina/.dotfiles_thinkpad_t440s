@@ -145,6 +145,16 @@ add_binds("normal", {
             return false
         end),
 
+  -- Added status bar toggle  
+  --  key({},          "t",           function (w)
+  --      if true == w.sbar.hidden then
+  --          w.sbar.ebox:show() w.sbar.hidden = false
+  --      else
+  --          w.sbar.ebox:hide() w.sbar.hidden = true
+  --      end
+  --  end),
+  -- End status bar toggle
+
     key({}, "i", "Enter `insert` mode.",
         function (w) w:set_mode("insert")  end),
 

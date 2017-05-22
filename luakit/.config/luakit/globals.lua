@@ -1,7 +1,6 @@
 -- Global variables for luakit
 
 local globals = {
---    homepage            = "https://aidanholm.github.io/luakit/",
     homepage            = "about:blank",
     scroll_step         = 40,
     zoom_step           = 0.1,
@@ -9,13 +8,12 @@ local globals = {
     max_srch_history    = 100,
     default_window_size = "1920x1080",
     vertical_tab_width  = 200,
+    term                = "termite",
 
  -- Disables loading of hostnames from /etc/hosts (for large host files)
  -- load_etc_hosts      = false,
  -- Disables checking if a filepath exists in search_open function
  -- check_filepath      = false,
- -- Specify your preferred terminal emulator
- -- term                = "termite",
 }
 
 -- List of search engines. Each item must contain a single %s which is
@@ -24,12 +22,14 @@ local globals = {
 -- it to avoid collisions with lua's string.format characters.
 -- See: http://www.lua.org/manual/5.1/manual.html#pdf-string.format
 globals.search_engines = {
-    aur		= "https://aur.archlinux.org/packages.php?O=0&K=%s&do_Search=Go",
-    duckduckgo  = "https://duckduckgo.com/?q=%s",
-    github      = "https://github.com/search?q=%s",
-    google      = "https://google.com/search?q=%s",
-    imdb        = "http://www.imdb.com/find?s=all&q=%s",
-    wikipedia   = "https://en.wikipedia.org/wiki/Special:Search?search=%s",
+    archwiki       = "https://wiki.archlinux.org/?search=%s",
+    aur		   = "https://aur.archlinux.org/packages.php?O=0&K=%s&do_Search=Go",
+    duckduckgo     = "https://duckduckgo.com/?q=%s",
+    github         = "https://github.com/search?q=%s",
+    google         = "https://google.com/search?q=%s",
+    imdb           = "http://www.imdb.com/find?s=all&q=%s",
+    ncbi           = "https://www.ncbi.nlm.nih.gov/gquery/?term=%s",
+    wikipedia      = "https://en.wikipedia.org/wiki/Special:Search?search=%s",
 }
 
 -- Set google as fallback search engine

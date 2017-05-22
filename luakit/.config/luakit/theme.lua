@@ -5,7 +5,7 @@
 local theme = {}
 
 -- Default settings
-theme.font = "16px xos4 Terminus"
+theme.font = "16px Roboto Condensed"
 theme.fg   = "#fff"
 theme.bg   = "#000"
 
@@ -55,8 +55,8 @@ theme.dbar_bg         = "#000"
 theme.dbar_error_fg   = "#F00"
 
 -- Input bar specific
-theme.ibar_fg           = "#fff"
-theme.ibar_bg           = "rgba(00,00,00,0.75)"
+theme.ibar_fg           = "#000"
+theme.ibar_bg           = "rgba(00,00,00,0.20)"
 
 -- Tab label
 theme.tab_fg            = "#888"
@@ -67,7 +67,7 @@ theme.selected_fg       = "#fff"
 theme.selected_bg       = "#000"
 theme.selected_ntheme   = "#ddd"
 theme.loading_fg        = "#33AADD"
-theme.loading_bg        = "#000"
+theme.loading_bg        = "#fff"
 
 theme.selected_private_tab_bg = "#3d295b"
 theme.private_tab_bg    = "#22254a"
