@@ -42,11 +42,12 @@ globals.search_engines.default = globals.search_engines.google
 -- https://webkitgtk.org/reference/webkit2gtk/stable/WebKitSettings.html
 globals.domain_props = {
     ["all"] = {
-        enable_webgl               = true,
-        zoom_level                 = 1.2,
-        -- zoom_text_only          = true,
-        -- enable_scripts          = false,
-        -- enable_plugins          = false,
+        enable_webgl                 = true,
+        zoom_level                   = 1.2,
+        enable_smooth_scrolling      = true,
+        -- zoom_text_only            = true,
+        -- enable_scripts            = false,
+        -- enable_plugins            = false,
     }, --[[
     ["youtube.com"] = {
         enable_scripts = true,

@@ -5,7 +5,7 @@
 local theme = {}
 
 -- Default settings
-theme.font = "16px Roboto Condensed"
+theme.font = "16px Roboto"
 theme.fg   = "#000"
 theme.bg   = "#D3D3D3"
 
@@ -56,16 +56,16 @@ theme.dbar_error_fg   = "#F00"
 
 -- Input bar specific
 theme.ibar_fg           = "#fff"
-theme.ibar_bg           = "#000"
+theme.ibar_bg           = "rgba(22,22,22,.90)"
 
 -- Tab label
 theme.tab_fg            = "#888"
-theme.tab_bg            = "#222"
-theme.tab_hover_bg      = "#292929"
+theme.tab_bg            = "rgba(22,22,22,.80)"
+theme.tab_hover_bg      = "rgba(0,0,0,0.1)"
 theme.tab_ntheme        = "#ddd"
-theme.selected_fg       = "#fff"
-theme.selected_bg       = "#000"
-theme.selected_ntheme   = "#ddd"
+theme.selected_fg       = theme.fg
+theme.selected_bg       = theme.bg
+theme.selected_ntheme   = "#009900"
 theme.loading_fg        = "#33AADD"
 theme.loading_bg        = "#fff"
 
