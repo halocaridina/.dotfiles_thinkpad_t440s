@@ -169,7 +169,7 @@ require "error_page"
 require "styles"
 
 -- Hide scrollbars on all pages
-require "hide_scrollbars"
+-- require "hide_scrollbars"
 
 -- Automatically apply per-domain webview properties
 require "domain_props"
@@ -217,3 +217,4 @@ if unique then
 end
 
 -- vim: et:sw=4:ts=8:sts=4:tw=80
+
