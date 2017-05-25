@@ -17,7 +17,7 @@ xterm*backarrowKey: false
 xterm*ttyModes: erase ^?
 xterm*scrollTtyOutput: false
 
-xterm*faceName: xos4 Terminus:antialias=false
+xterm*faceName: xos4 Terminess Powerline:antialias=false
 xterm*allowBoldFonts: false
 xterm*faceSize:  10
 xterm*faceSize1: 7
