@@ -1,5 +1,5 @@
 # GENERAL BEHAVIORS
-set font "xos4 Terminus 10"
+set font "Roboto 12"
 set adjust-open width
 set scroll-wrap false
 set abort-clear-search true
