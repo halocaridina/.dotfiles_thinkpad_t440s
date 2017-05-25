@@ -1,0 +1,124 @@
+Welcome - The Santos Lab
+http://www.auburn.edu/~santosr/
+Arch Linux Forums
+https://bbs.archlinux.org/
+Manjaro Linux Forum
+https://forum.manjaro.org/
+/r/unixporn - Reddit
+https://www.reddit.com/r/unixporn
+i3 FAQ
+http://faq.i3wm.org/questions/
+i3 Window Manager - Reddit
+https://www.reddit.com/r/i3wm/
+Airblader/i3 · GitHub
+https://github.com/Airblader/i3/tree/gaps-next
+Xombrero - Home
+https://github.com/conformal/xombrero/wiki
+YBlog - Learn Vim Progressively
+http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/
+Hex transparency in colors - Stack Overflow
+http://stackoverflow.com/questions/15852122/hex-transparency-in-colors
+GnuPG - ArchWiki
+https://wiki.archlinux.org/index.php/GnuPG
+Pass - ArchWiki
+https://wiki.archlinux.org/index.php/Pass
+Pass: The Standard Unix Password Manager
+http://www.passwordstore.org/
+Linux Crypto: Passwords
+http://blog.sanctum.geek.nz/linux-crypto-passwords/
+How to backup, restore, delete, revoke your private and public GPG/PGK keys
+http://linux.koolsolutions.com/2009/04/01/gpgpgp-part-5-backing-up-restoring-revoking-and-deleting-your-gpgpgp-keys-in-debian/
+Good solution to encrypt some files in unix?
+http://serverfault.com/questions/489140/what-is-a-good-solution-to-encrypt-some-files-in-unix
+Simple howtos
+http://sleepyhead.de/howto/?href=crypt
+Encrypt And Decrypt Files With A Password Using OpenSSL
+http://www.shellhacks.com/en/Encrypt-And-Decrypt-Files-With-A-Password-Using-OpenSSL
+[SOLVED] 7-zip password security
+http://ubuntuforums.org/showthread.php?t=2014689
+
+Gentoo Forums :: View topic - asound.conf: Filter for Subwoofer Channel? [nearly solved]
+https://forums.gentoo.org/viewtopic-p-4528619.html
+How to encrypt a USB storage device with 'Linux Unified Key Setup' (LUKS)
+https://miguelmenendez.pro/en/articles/encrypt-usb-storage-device-linux-unified-key-setup-luks.html
+EncryptedFilesystemsOnRemovableStorage - Community Help Wiki
+https://help.ubuntu.com/community/EncryptedFilesystemsOnRemovableStorage
+Run Linux on Surface Pro 3 - Love My Surface
+http://www.lovemysurface.net/run-linux-on-surface-pro-3/
+ubuntu - Change sampling rate in ALSA - Unix & Linux Stack Exchange
+http://unix.stackexchange.com/questions/74558/change-sampling-rate-in-alsa
+How to Run Your Own Git Server | Linux.com
+https://www.linux.com/learn/tutorials/824358-how-to-run-your-own-git-server
+
+PGP and SSH keys on a Yubikey NEO « Eric Severance
+https://www.esev.com/blog/post/2015-01-pgp-ssh-key-on-yubikey-neo/
+GPG with yubikey
+https://malcolmsparks.com/posts/yubikey-gpg.html
+Subkeys - Debian Wiki
+https://wiki.debian.org/Subkeys
+Creating the perfect GPG keypair - Alex Cabal
+https://alexcabal.com/creating-the-perfect-gpg-keypair/
+2 Factor Authentication GPG & SSH keys with pass and Yubikey NEO
+https://karlgrz.com/2fa-gpg-ssh-keys-with-pass-and-yubikey-neo/
+the dilfridge blog: OpenPGP smartcards and Gentoo - part 2: card and gnupg setup
+http://dilfridge.blogspot.com/2013/05/openpgp-smartcards-and-gentoo-part-2.html
+Single GPG key and multiple yubikeys
+https://lists.gnupg.org/pipermail/gnupg-users/2016-February/055354.html
+Single GPG key and multiple yubikeys | GnuPG | users
+http://www.gossamer-threads.com/lists/gnupg/users/75021
+gpg: KEYTOCARD failed: Unusable secret key | GnuPG | users
+http://www.gossamer-threads.com/lists/gnupg/users/76763
+Offline GnuPG Master Key and Subkeys on YubiKey NEO Smartcard – Simon Josefsson's blog
+https://blog.josefsson.org/2014/06/23/offline-gnupg-master-key-and-subkeys-on-yubikey-neo-smartcard/
+
+Arch Linux installation procedure for LVM on LUKS: UEFI EFISTUB boot with gumiboot on a Samsung Series 9 laptop. · GitHub
+https://gist.github.com/jasonwryan/4618490
+How To Use Journalctl to View and Manipulate Systemd Logs | DigitalOcean
+https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs
+LUKS: Add a Backup Key, Backup, Restore and Delete LUKS Volume Header | Lisenet.com :: Linux | Security | Networking
+https://www.lisenet.com/2013/luks-add-keys-backup-and-restore-volume-header/
+10 Linux cryptsetup Examples for LUKS Key Management (How to Add, Remove, Change, Reset LUKS encryption Key)
+http://www.thegeekstuff.com/2016/03/cryptsetup-lukskey/
+dm-crypt/Device encryption - ArchWiki
+https://wiki.archlinux.org/index.php/Dm-crypt/Device_encryption#Configuring_LUKS_to_make_use_of_the_keyfile
+Understanding Systemd Units and Unit Files | DigitalOcean
+https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files
+LVM Resize - How to Increase an LVM Partition | RootUsers
+https://www.rootusers.com/lvm-resize-how-to-increase-an-lvm-partition/
+Using the Fork-and-Branch Git Workflow · Scott's Weblog · The weblog of an IT pro specializing in virtualization, networking, open source, and cloud computing
+http://blog.scottlowe.org/2015/01/27/using-fork-branch-git-workflow/
+linux - How to restart a service if its dependent service is restarted - Stack Overflow
+http://stackoverflow.com/questions/36043964/how-to-restart-a-service-if-its-dependent-service-is-restarted
+Managing /etc with etckeeper and git
+http://crashmag.net/managing-etc-with-etckeeper-and-git
+dracut.cmdline(7) - Linux manual page
+http://man7.org/linux/man-pages/man7/dracut.cmdline.7.html
+Drop Your ThinkPad's Temperature on ArchLinux (Example)
+https://coderwall.com/p/f1awea/drop-your-thinkpad-s-temperature-on-archlinux
+Bash Reference Manual: Bash Conditional Expressions
+http://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html
+
+GitHub - phortx/Raspberry-Pi-Setup-Guide: A really opionionated guide how to setup a Raspberry Pi (1 or 2) with Arch Linux including WiringPi, NTP, Wi-Fi, SSH, Ruby, ZSH and more.
+https://github.com/phortx/Raspberry-Pi-Setup-Guide
+Raspberry Pi microSD card performance comparison - 2015 | Jeff Geerling
+http://www.jeffgeerling.com/blogs/jeff-geerling/raspberry-pi-microsd-card
+systemd - Cause a script to execute after networking has started? - Unix & Linux Stack Exchange
+http://unix.stackexchange.com/questions/126009/cause-a-script-to-execute-after-networking-has-started
+How to Change the UUID of a Linux Partition | Sudo JuiceSudo Juice
+http://www.sudo-juice.com/how-to-change-the-uuid-of-a-linux-partition/
+AMD Graphics stalling on 3 Macs with latest El ... | Official Apple Support Communities
+https://origin-discussions-us.apple.com/thread/7800580?start=0&tstart=0
+USB Gadget mode with Arch Linux and the Raspberry Pi Zero – Medium
+https://medium.com/@dwilkins/usb-gadget-mode-with-arch-linux-and-the-raspberry-pi-zero-e70a0f17730a
+Ds3231 rtc module · Wiki · openbeelab / docs · GitLab
+https://gitlab.com/openbeelab/docs/wikis/ds3231-rtc-module
+journal-triggerd @ jjacky.com
+https://jjacky.com/journal-triggerd/
+GitHub - jjk-jacky/journal-triggerd: Runs trigger on systemd's journal messages
+https://github.com/jjk-jacky/journal-triggerd
+dotfiles/.xmonad/dzen2 at master · windelicato/dotfiles · GitHub
+https://github.com/windelicato/dotfiles/tree/master/.xmonad/dzen2
+http://herbstluftgen.hellco.net/
+http://herbstluftgen.hellco.net/
+How To Install and Use Mosh on a VPS | DigitalOcean
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-mosh-on-a-vps
