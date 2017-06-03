@@ -15,4 +15,6 @@
       <value type="string" value="Solaar"/>
     </property>
   </property>
+  <property name="log-level" type="uint" value="0"/>
+  <property name="log-level-apps" type="uint" value="0"/>
 </channel>
