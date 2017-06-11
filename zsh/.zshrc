@@ -1,13 +1,13 @@
 #*****************************************************************#
-# Source Prezto.
+## Source Prezto.
  if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
    source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 #*****************************************************************#
 
-# Zsh config and history
+## Zsh config and history
 
-# History
+## History
 ##
 HISTFILE=~/.zsh_history         # where to store zsh history
 HISTSIZE=1024                   # big history
@@ -25,48 +25,45 @@ unsetopt correct_all
 #Set zsh auto completion colors to dircolorsc
 #zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
-#PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
-
 setopt NO_HUP
 setopt NO_CHECK_JOBS
 setopt print_exit_value
 
-# You may need to manually set your language environment
+## You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
-# Compilation flags
+## Compilation flags
 #export ARCHFLAGS="-arch x86_64"
 
-# ssh
+## Set PATH of SSH key files
 #export SSH_KEY_PATH="~/.ssh/id_rsa"
 
-# For simple TERM prompt when in TTY
+## For simple TERM prompt when in TTY
 if [ $TERM = "linux" ]; then
       # simple prompt when in TTY
     PROMPT='%B%t%b %n@%m:%0~ $ '
 fi
 
-# Preferred editor for local and remote sessions
+## Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vim'
  else
    export EDITOR='vim'
  fi
 
-# User configuration
-
+## User configuration
 export PATH=/opt/edirect:$HOME/.bin:/usr/local/bin:$PATH
 export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 
-# enable color support of ls and file types
+## Enable color support of ls and file types
 if [ "$TERM" != "dumb" ]; then
         eval "`dircolors -b ~/.config/dircolors/dircolorsrc_srs`"
         alias ls='ls --color=auto'
         alias grep='grep --color=auto'
 fi
 
-# Various aliases
+## Various aliases
 
 alias sx='startx -- -keeptty -nolisten tcp > /tmp/xsession-errors.log 2>&1'
 
@@ -92,6 +89,7 @@ alias pacc="sudo pacman -Scc"        # Clean cache - delete all not currently in
 alias paclf="pacman -Ql"             # List all files installed by a given package
 alias pacexpl="pacman -D --asexp"    # Mark one or more installed packages as explicitly installed 
 alias pacimpl="pacman -D --asdep"    # Mark one or more installed packages as non explicitly installed
+alias install_size="/usr/bin/expac -Q '%m' -H M | /usr/bin/datamash -W sum 1"
 
 alias l='ls -Flh'
 alias ll='ls -Falh'
@@ -130,8 +128,7 @@ alias webcam_screenshot='mpv av://v4l2:/dev/video0'
 alias webcam_mencoder_video='mencoder tv:// -tv driver=v4l2:width=640:height=480:device=/dev/video0:forceaudio:immediatemode=0:alsa:adevice=hw.0,0 -ofps 30 -ovc lavc -lavcopts vcodec=mjpeg -oac mp3lame -lameopts cbr:br=64:mode=3 -o'
 alias webcam_ffmpeg_video='ffmpeg -f v4l2 -video_size 640x480 -thread_queue_size 1024 -pixel_format uyvy422 -framerate 29.97 -i /dev/video0 -f alsa -thread_queue_size 1024 -i hw:0,0 -acodec libmp3lame -ab 96k -c:v libx264 -aspect 4:3 -strict -2 -y -threads 4'
 
-# Export variables
-
+## Export variables
 export PAGER='vimpager'
 export LESS='eMq'
 export EDITOR='vim'
