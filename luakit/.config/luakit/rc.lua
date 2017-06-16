@@ -20,6 +20,9 @@ if unique then
     end
 end
 
+-- Set the number of web processes to use. A value of 0 means 'no limit'.
+luakit.process_limit = 0
+
 -- Load library of useful functions for luakit
 local lousy = require "lousy"
 
@@ -40,16 +43,20 @@ local window = require "window"
 -- ("$XDG_CONFIG_HOME/luakit/webview.lua" or "/etc/xdg/luakit/webview.lua")
 local webview = require "webview"
 
--- Left-aligned status bar widgets
-require "widget.uri"
-require "widget.hist"
-require "widget.progress"
+window.add_signal("build", function (w)
+    local widgets, l, r = require "lousy.widget", w.sbar.l, w.sbar.r
 
--- Right-aligned status bar widgets
-require "widget.buf"
-require "widget.ssl"
-require "widget.tabi"
-require "widget.scroll"
+    -- Left-aligned status bar widgets
+    l.layout:pack(widgets.uri())
+    l.layout:pack(widgets.hist())
+    l.layout:pack(widgets.progress())
+
+    -- Right-aligned status bar widgets
+    r.layout:pack(widgets.buf())
+    r.layout:pack(widgets.ssl())
+    r.layout:pack(widgets.tabi())
+    r.layout:pack(widgets.scroll())
+end)
 
 -- Load users mode configuration
 -- ("$XDG_CONFIG_HOME/luakit/modes.lua" or "/etc/xdg/luakit/modes.lua")
@@ -180,12 +187,15 @@ require "image_css"
 -- Add a new tab page
 require "newtab_chrome"
 
+-- Add tab favicons mod
+require "tab_favicons"
+
+-- Add :view-source command
+require "view_source"
+
 -----------------------------
 -- End user script loading --
 -----------------------------
-
--- Set the number of web processes to use. A value of 0 means 'no limit'.
-luakit.process_limit = 0
 
 -- Restore last saved session
 local w = (not luakit.nounique) and (session and session.restore())
@@ -217,4 +227,3 @@ if unique then
 end
 
 -- vim: et:sw=4:ts=8:sts=4:tw=80
-
