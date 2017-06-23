@@ -9,6 +9,7 @@
     <property name="known_applications" type="array">
       <value type="string" value="Blueman"/>
       <value type="string" value="Electron"/>
+      <value type="string" value="i3pystatus"/>
       <value type="string" value="mpv"/>
       <value type="string" value="nm-applet"/>
       <value type="string" value="notify-send"/>
