@@ -69,6 +69,8 @@ alias sx='startx -- -keeptty -nolisten tcp > /tmp/xsession-errors.log 2>&1'
 
 alias upstream_git_update='git pull upstream master && git push origin master && git pull origin master'
 
+alias enabled_units='systemctl list-unit-files | grep enabled'
+
 alias restart_udev='sudo udevadm control --reload'
 alias view_recent_alerts='sudo journalctl -p err..alert -b'
 alias fw_clear='sudo iptables-restore < /etc/iptables/empty.rules'
