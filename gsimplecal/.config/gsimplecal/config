@@ -26,8 +26,8 @@ clock_label = Brisbane
 clock_tz = :Australia/Brisbane
 clock_label = Tokyo
 clock_tz = :Asia/Tokyo
-clock_label = Paris
-clock_tz = :Europe/Paris
+clock_label = Bergen
+clock_tz = :Europe/Oslo
 clock_label = UTC
 clock_tz = :UTC
 
