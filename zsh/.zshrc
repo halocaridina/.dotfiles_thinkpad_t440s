@@ -17,7 +17,7 @@ setopt hist_ignore_all_dups     # no duplicate
 unsetopt hist_ignore_space      # ignore space prefixed commands
 setopt hist_reduce_blanks       # trim blanks
 setopt hist_verify              # show before executing history commands
-setopt inc_append_history       # add commands as they are typed, don't wait until shell exit
+setopt inc_append_history       # add commands as they are typed, do not wait until shell exit
 #setopt share_history            # share hist between sessions
 setopt bang_hist                # !keyword
 unsetopt correct_all
@@ -116,6 +116,8 @@ alias battery_level='cat /sys/class/power_supply/BAT0/uevent | grep POWER_SUPPLY
 alias i3_exit='i3-msg exit'
 alias sys-info='inxi -Fxz'
 alias screenfetch='neofetch'
+alias nano='vim'
+alias less='less -e -i -M -R -q'
 
 alias rm_DS_Stores='find . -name ".DS_Store" -delete'
 
@@ -130,11 +132,13 @@ alias webcam_ffmpeg_video='ffmpeg -f v4l2 -video_size 640x480 -thread_queue_size
 
 ## Export variables
 export PAGER='vimpager'
-export LESS='eMq'
 export EDITOR='vim'
 export GCC_COLORS='error=01;38;5;160:warning=01;38;5;220:note=01;38;5;10:caret=01;38;5;33:locus=01:quote=01'
 export GREP_OPTIONS=
 export GREP_COLORS='fn=00;38;5;33:mc=00;36:ms=31:mt=01;38;5;200:ln=01;38;5;14'
+
+# Set lesspipe.sh for viewing PDFs in less
+LESSOPEN="|lesspipe.sh %s"; export LESSOPEN
 
 ##################################################################################
 
