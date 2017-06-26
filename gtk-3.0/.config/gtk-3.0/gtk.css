@@ -1,0 +1,10 @@
+tooltip {
+     border-radius: 2px;
+     border: 1px solid #000000;
+     margin: 0;
+}
+
+tooltip.background {
+     background-color: rgba(79, 81, 84, 0.8);
+     background-clip: padding-box; 
+}
