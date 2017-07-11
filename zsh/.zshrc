@@ -120,6 +120,7 @@ alias sys-info='inxi -Fxz'
 alias screenfetch='neofetch'
 alias nano='vim'
 alias less='less -e -i -M -R -q'
+alias sm_readers_ls='opensc-tool -l'
 
 alias rm_DS_Stores='find . -name ".DS_Store" -delete'
 
