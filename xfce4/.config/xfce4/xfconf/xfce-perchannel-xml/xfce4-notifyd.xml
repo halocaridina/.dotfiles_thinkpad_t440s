@@ -4,7 +4,7 @@
   <property name="notify-location" type="uint" value="2"/>
   <property name="theme" type="string" value="Default"/>
   <property name="initial-opacity" type="double" value="0.900000"/>
-  <property name="expire-timeout" type="int" value="10"/>
+  <property name="expire-timeout" type="int" value="4"/>
   <property name="applications" type="empty">
     <property name="known_applications" type="array">
       <value type="string" value="Blueman"/>
@@ -16,8 +16,10 @@
       <value type="string" value="notify-send.sh"/>
       <value type="string" value="pasystray"/>
       <value type="string" value="Solaar"/>
+      <value type="string" value="Xfce volume daemon"/>
     </property>
   </property>
   <property name="log-level" type="uint" value="0"/>
   <property name="log-level-apps" type="uint" value="0"/>
+  <property name="do-fadeout" type="bool" value="true"/>
 </channel>
