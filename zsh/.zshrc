@@ -65,6 +65,8 @@ fi
 
 ## Various aliases
 
+alias ws_2_underscore='for f in *\ *; do mv "$f" "${f// /_}"; done'
+
 alias sx='startx -- -keeptty -nolisten tcp > /tmp/xsession-errors.log 2>&1'
 
 alias upstream_git_update='git pull upstream master && git push origin master && git pull origin master'
