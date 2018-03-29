@@ -1705,3 +1705,86 @@
 2017-09-21 22:43:19 | razer                          | DEBUG    | Device event [add]: /devices/pci0000:00/0000:00:14.0/usb2/2-3/2-3:1.0/0003:1050:0407.000A
 2017-09-21 22:46:26 | razer                          | DEBUG    | Device event [remove]: /devices/pci0000:00/0000:00:14.0/usb2/2-3/2-3:1.0/0003:1050:0407.000A
 2017-09-21 22:46:26 | razer                          | DEBUG    | Device event [add]: /devices/pci0000:00/0000:00:14.0/usb2/2-3/2-3:1.0/0003:1050:0407.000B
+2018-02-28 06:24:56 | razer                          | INFO     | Initialising Daemon (v2.2.2). Pid: 10943
+2018-02-28 06:24:56 | razer.screensaver              | INFO     | Initialising DBus Screensaver Monitor
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerAbyssus ---------------------------- (1532:0042)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerAbyssus1800 ------------------------ (1532:0020)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerAbyssusV2 -------------------------- (1532:005B)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerAnansi ----------------------------- (1532:010F)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerBlackWidowChroma ------------------- (1532:0203)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerBlackWidowChromaOverwatch ---------- (1532:0211)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerBlackWidowChromaTournamentEdition -- (1532:0209)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerBlackWidowChromaV2 ----------------- (1532:0221)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerBlackWidowClassic ------------------ (1532:011B)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerBlackWidowClassicAlternate --------- (1532:010E)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerBlackWidowUltimate2012 ------------- (1532:010D)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerBlackWidowUltimate2013 ------------- (1532:011A)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerBlackWidowUltimate2016 ------------- (1532:0214)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerBlackWidowXChroma ------------------ (1532:0216)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerBlackWidowXTournamentEditionChroma - (1532:021A)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerBlackWidowXUltimate ---------------- (1532:0217)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerBladeLate2016 ---------------------- (1532:0224)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerBladePro2017 ----------------------- (1532:0225)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerBladePro2017FullHD ----------------- (1532:022F)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerBladeProLate2016 ------------------- (1532:0210)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerBladeQHD --------------------------- (1532:020F)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerBladeStealth ----------------------- (1532:0205)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerBladeStealthLate2016 --------------- (1532:0220)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerBladeStealthLate2017 --------------- (1532:0232)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerBladeStealthMid2017 ---------------- (1532:022D)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerChromaMugHolder -------------------- (1532:0F07)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerCore ------------------------------- (1532:0215)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerDeathAdderChroma ------------------- (1532:0043)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerDeathAdderElite -------------------- (1532:005C)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerDeathStalkerChroma ----------------- (1532:0204)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerDeathStalkerExpert ----------------- (1532:0202)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerDiamondbackChroma ------------------ (1532:004C)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerFirefly ---------------------------- (1532:0C00)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerImperator -------------------------- (1532:002F)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerKraken ----------------------------- (1532:0504)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerKrakenClassic ---------------------- (1532:0501)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerKrakenV2 --------------------------- (1532:0510)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerMamba2012Wired --------------------- (1532:0024)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerMamba2012Wireless ------------------ (1532:0025)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerMambaChromaWired ------------------- (1532:0044)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerMambaChromaWireless ---------------- (1532:0045)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerMambaTE ---------------------------- (1532:0046)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerNaga2014 --------------------------- (1532:0040)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerNagaChroma ------------------------- (1532:0053)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerNagaHex ---------------------------- (1532:0041)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerNagaHexRed ------------------------- (1532:0036)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerNagaHexV2 -------------------------- (1532:0050)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerNostromo --------------------------- (1532:0111)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerOrbweaver -------------------------- (1532:0113)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerOrbweaverChroma -------------------- (1532:0207)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerOrnata ----------------------------- (1532:021F)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerOrnataChroma ----------------------- (1532:021E)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerOrochi2011 ------------------------- (1532:0013)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerOrochi2013 ------------------------- (1532:0039)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerOrochiWired ------------------------ (1532:0048)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerOuroboros -------------------------- (1532:0032)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerTaipan ----------------------------- (1532:0034)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerTartarus --------------------------- (1532:0201)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Loaded device specification: RazerTartarusChroma --------------------- (1532:0208)
+2018-02-28 06:24:56 | razer                          | DEBUG    | Adding razer.daemon.version method to DBus
+2018-02-28 06:24:56 | razer                          | DEBUG    | Adding razer.devices.getDevices method to DBus
+2018-02-28 06:24:56 | razer                          | DEBUG    | Adding razer.devices.syncEffects method to DBus
+2018-02-28 06:24:56 | razer                          | DEBUG    | Adding razer.daemon.stop method to DBus
+2018-02-28 06:24:56 | razer                          | DEBUG    | Adding razer.devices.getSyncEffects method to DBus
+2018-02-28 06:24:56 | razer                          | DEBUG    | Adding razer.devices.enableTurnOffOnScreensaver method to DBus
+2018-02-28 06:24:56 | razer                          | DEBUG    | Adding razer.devices.supportedDevices method to DBus
+2018-02-28 06:24:56 | razer                          | DEBUG    | Adding razer.devices.getOffOnScreensaver method to DBus
+2018-02-28 06:24:56 | razer                          | INFO     | Serving DBus
+2018-02-28 06:51:17 | razer                          | DEBUG    | Device event [unbind]: /devices/pci0000:00/0000:00:14.0/usb2/2-2/2-2:1.1/0003:1050:0407.0002
+2018-02-28 06:51:17 | razer                          | DEBUG    | Device event [remove]: /devices/pci0000:00/0000:00:14.0/usb2/2-2/2-2:1.1/0003:1050:0407.0002
+2018-02-28 06:51:17 | razer                          | DEBUG    | Device event [unbind]: /devices/pci0000:00/0000:00:14.0/usb2/2-2/2-2:1.0/0003:1050:0407.0004
+2018-02-28 06:51:17 | razer                          | DEBUG    | Device event [remove]: /devices/pci0000:00/0000:00:14.0/usb2/2-2/2-2:1.0/0003:1050:0407.0004
+2018-02-28 19:03:28 | razer                          | DEBUG    | Device event [add]: /devices/pci0000:00/0000:00:14.0/usb2/2-1/2-1:1.1/0003:1050:0407.0006
+2018-02-28 19:03:28 | razer                          | DEBUG    | Device event [add]: /devices/pci0000:00/0000:00:14.0/usb2/2-1/2-1:1.0/0003:1050:0407.0005
+2018-02-28 19:03:28 | razer                          | DEBUG    | Device event [bind]: /devices/pci0000:00/0000:00:14.0/usb2/2-1/2-1:1.1/0003:1050:0407.0006
+2018-02-28 19:03:28 | razer                          | DEBUG    | Device event [bind]: /devices/pci0000:00/0000:00:14.0/usb2/2-1/2-1:1.0/0003:1050:0407.0005
+2018-02-28 19:03:32 | razer                          | DEBUG    | Device event [unbind]: /devices/pci0000:00/0000:00:14.0/usb2/2-1/2-1:1.0/0003:1050:0407.0005
+2018-02-28 19:03:32 | razer                          | DEBUG    | Device event [remove]: /devices/pci0000:00/0000:00:14.0/usb2/2-1/2-1:1.0/0003:1050:0407.0005
+2018-02-28 19:03:32 | razer                          | DEBUG    | Device event [add]: /devices/pci0000:00/0000:00:14.0/usb2/2-1/2-1:1.0/0003:1050:0407.0007
+2018-02-28 19:03:32 | razer                          | DEBUG    | Device event [bind]: /devices/pci0000:00/0000:00:14.0/usb2/2-1/2-1:1.0/0003:1050:0407.0007
+2018-02-28 20:26:02 | razer                          | INFO     | Stopping daemon on signal 15

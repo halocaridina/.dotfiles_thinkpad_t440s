@@ -3,7 +3,7 @@
 
 ## set nowrap
 
-set const
+set constantshow
 set rebinddelete
 set smooth
 set suspend
