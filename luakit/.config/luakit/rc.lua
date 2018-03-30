@@ -51,6 +51,7 @@ local modes = require "modes"
 local binds = require "binds"
 
 local settings = require "settings"
+require "settings_chrome"
 
 ----------------------------------
 -- Optional user script loading --
@@ -117,7 +118,7 @@ local history = require "history"
 local history_chrome = require "history_chrome"
 
 local help_chrome = require "help_chrome"
-local introspector_chrome = require "introspector_chrome"
+local binds_chrome = require "binds_chrome"
 
 -- Add command completion
 local completion = require "completion"
@@ -146,7 +147,7 @@ local error_page = require "error_page"
 local styles = require "styles"
 
 -- Hide scrollbars on all pages
-local hide_scrollbars = require "hide_scrollbars"
+--local hide_scrollbars = require "hide_scrollbars"
 
 -- Add a stylesheet when showing images
 local image_css = require "image_css"
@@ -160,8 +161,12 @@ local tab_favicons = require "tab_favicons"
 -- Add :view-source command
 local view_source = require "view_source"
 
--- Load user preferences
-local userprefs = require "userprefs"
+-- Put "userconf.lua" in your Luakit config dir with your own tweaks; if this is
+-- permanent, no need to copy/paste/modify the default rc.lua whenever you
+-- update Luakit.
+if pcall(function () lousy.util.find_config("userconf.lua") end) then
+    require "userconf"
+end
 
 -----------------------------
 -- End user script loading --
