@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 hc() { "${herbstclient_command[@]:-herbstclient}" "$@" ;}
 monitor=${1:-0}
@@ -11,11 +11,11 @@ fi
 x=${geometry[0]}
 y=${geometry[1]}
 panel_width=${geometry[2]}
-panel_height=20
-font="-*-terminus-medium-*-*-*-18-*-*-*-*-*-*-*"
-bgcolor='#222222'
+panel_height=18
+font="-xos4-terminus-medium-*-*-*-12-*-*-*-*-*-*-*"
+bgcolor='#1B1B1B'  ## use #222222 to match termite background
 selbg=$(hc get window_border_active_color)
-selfg='#101010'
+selfg='#FFFFFF'
 
 ####
 # Try to find textwidth binary.
@@ -76,12 +76,18 @@ hc pad $monitor $panel_height
     visible=true
     date=""
     windowtitle=""
+    network_icon=""
+    brightness_icon=""
+    brightness=""
+    vol_icon=""
+    volume=""
+    power_state_icon=""
+    battery=""
     while true ; do
 
         ### Output ###
         # This part prints dzen data based on the _previous_ data handling run,
         # and then waits for the next event to happen.
-
         bordercolor="#26221C"
         separator="^bg()^fg($selbg)|"
         # draw tags
@@ -103,32 +109,89 @@ hc pad $monitor $panel_height
                     echo -n "^bg()^fg(#ababab)"
                     ;;
             esac
-            if [ ! -z "$dzen2_svn" ]; then
-                # clickable tags if using SVN dzen
-                echo -n "^ca(1,\"${herbstclient_command[@]:-herbstclient}\" "
-                echo -n "focus_monitor \"$monitor\" && "
-                echo -n "\"${herbstclient_command[@]:-herbstclient}\" "
-                echo -n "use \"${i:1}\") ${i:1} ^ca()"
-            else
-                # non-clickable tags if using older dzen
-                echo -n " ${i:1} "
+            case ${i:1} in
+                '1')
+                    icon="^fn(Droid Sans Japanese:size=11)一^fn()"
+                    ;;
+                '2')
+                    icon="^fn(Droid Sans Japanese:size=11)二^fn()"
+                    ;;
+                '3')
+                    icon="^fn(Droid Sans Japanese:size=11)三^fn()"
+                    ;;
+                '4')
+                    icon="^fn(Droid Sans Japanese:size=11)四^fn()"
+                    ;;
+                '5')
+                    icon="^fn(Droid Sans Japanese:size=11)五^fn()"
+                    ;;
+                '6')
+                    icon="^fn(Droid Sans Japanese:size=11)六^fn()"
+                    ;;
+                '7')
+                    icon="^fn(Droid Sans Japanese:size=11)七^fn()"
+                    ;;
+                '8')
+                    icon="^fn()^fn(DejaVuSansMono Nerd Font:style=Book:size=14)^fn()"
+                    ;;
+                '9')
+                    icon="^fn()^fn(DejaVuSansMono Nerd Font:style=Book:size=14)^fn()"
+                    ;;
+            esac
+            # If tag is not empty, show it.
+            if [[ "${i:0:1}" != '.' ]]; then
+                # For clickable tags
+                echo -n "^ca(1,herbstclient focus_monitor $monitor && herbstclient use ${i:1}) $icon ^ca()"
+                # For non-clickable tags
+                # echo -n " ${i:1} "
             fi
         done
         echo -n "$separator"
         echo -n "^bg()^fg() ${windowtitle//^/^^}"
-        # small adjustments
-        battery=`acpi -b | awk '{print $3 $4 $5}' | sed -e 's/,/ /g' -e 's/^\([A-Z]\)[a-z]*/\1/' -e 's/:[0-9][0-9]$//'`
-        right="$separator^bg($hintcolor)^fg(#efefef)"
-
-        if [ "$battery" != "/" ] ;then
-            right="$right $battery $separator ^fg(#efefef)"
+        # Set up panel information
+        # Network connectivity
+        net_connection=`/usr/bin/ip route get 8.8.8.8 | head -1 | awk '{print $7}' 2> /dev/null`
+        if [[ !  -z  $net_connection  ]]; then
+            network_icon="^fg()^fg(#8AE234)^fn(DejaVuSansMono Nerd Font:style=Book:size=15)^fn()^fg(#8AE234)"
+        else
+            network_icon="^fg()^fg(#EF2929)^fn(DejaVuSansMono Nerd Font:style=Book:size=15)^fn()^fg(#EF2929)"
         fi
-
-        right="$right $separator^bg() $date $separator"
+        # Volume
+        mute=`/usr/bin/pulseaudio-ctl full-status | awk '{print $2}'`
+        if [ ${mute} == "yes" ]; then
+            volume="MUTE"
+            vol_icon="^fg()^fg(#EF2929)^fn(DejaVuSansMono Nerd Font:style=Book:size=15)^fn()^fg(#EF2929)"
+        else
+            volume=$(/usr/bin/pulseaudio-ctl full-status | awk '{print $1}' | sed -e 's/$/%/')
+            vol_icon="^fg()^fn(DejaVuSansMono Nerd Font:style=Book:size=15)^fn()"
+        fi
+        # Battery
+        battery=`acpi -b | awk '{print $3 $4 $5}' | sed -e 's/,/ /g' -e 's/^\([A-Z]\)[a-z]*/\1/;s/U/PWR/;s/D/BAT/;s/C/CHR/' -e 's/:[0-9][0-9]$//'`
+        power_state=`echo $battery | awk '{print $1}'`
+        if [ ${power_state} == "PWR" ]; then
+            power_state_icon="^fg()^fn(DejaVuSansMono Nerd Font:style=Book:size=13)^fn()"
+        elif [ ${power_state} == "CHR" ]; then
+            power_state_icon="^fg()^fg(#E5E500)^fn(DejaVuSansMono Nerd Font:style=Book:size=8)^fn()^fg(#E5E500)"
+        else
+            power_state_icon="^fg()^fg(#FFA500)^fn(DejaVuSansMono Nerd Font:style=Book:size=20)^fn()^fg(#FFA500)"
+        fi
+        # Brightness
+        brightness=`/usr/bin/light -G | awk -F"." '{print $1}' | sed -e 's/$/%/'`
+        brightness_icon="^fg()^fn(DejaVuSansMono Nerd Font:style=Book:size=9)^fn()"
+        # Separator
+        right="$separator^bg($hintcolor)^fg(#efefef)"
+        # Put together indicator portion of panel
+        if [ "$battery" != "/" ] ;then
+            right="$right $network_icon $separator $brightness_icon $brightness $separator $vol_icon $volume $separator $power_state_icon $battery $separator ^fg(#efefef)"
+        fi
+        # Put together clock portion of panel
+        clock_icon="^fn(DejaVuSansMono Nerd Font:style=Book:size=14)^fn()"
+        right="$right $separator^fg() $clock_icon $date $separator"
         right_text_only=$(echo -n "$right" | sed 's.\^[^(]*([^)]*)..g')
-        # get width of right aligned text.. and add some space..
+        # get width of right aligned text.. and add some space for offset..
         width=$($textwidth "$font" "$right_text_only")
-        echo -n "^pa($(($panel_width - $width)))          $right"
+        offset=-26
+        echo -n "^pa($(($panel_width - $width - $offset)))$right"
         echo
 
         ### Data handling ###
@@ -144,11 +207,11 @@ hc pad $monitor $panel_height
         # find out event origin
         case "${cmd[0]}" in
             tag*)
-                #echo "resetting tags" >&2
+                echo "resetting tags" >&2
                 IFS=$'\t' read -ra tags <<< "$(hc tag_status $monitor)"
                 ;;
             date)
-                #echo "resetting date" >&2
+                echo "resetting date" >&2
                 date="${cmd[@]:1}"
                 ;;
             quit_panel)
@@ -177,8 +240,6 @@ hc pad $monitor $panel_height
             focus_changed|window_title_changed)
                 windowtitle="${cmd[@]:2}"
                 ;;
-            #player)
-            #    ;;
         esac
     done
 
@@ -186,7 +247,7 @@ hc pad $monitor $panel_height
     # After the data is gathered and processed, the output of the previous block
     # gets piped to dzen2.
 
-} 2> /dev/null | dzen2 -w $panel_width -x $x -y $y -fn "xos4 Terminus:size=12" -h $panel_height \
+} 2> /dev/null | dzen2 -w $panel_width -x $x -y $y -fn "$font" -h $panel_height \
     -e 'button3=;button4=exec:herbstclient use_index -1;button5=exec:herbstclient use_index +1' \
     -ta l -bg "$bgcolor" -fg '#efefef'
 
