@@ -5,7 +5,7 @@
 local theme = {}
 
 -- Default settings
-theme.font = "16px Roboto"
+theme.font = "Roboto Condensed, Regular 14px"
 theme.fg   = "#000"
 theme.bg   = "#D3D3D3"
 
@@ -77,9 +77,9 @@ theme.trust_fg          = "#009900"
 theme.notrust_fg        = "#990000"
 
 -- General colour pairings
-theme.ok = { fg = "#000", bg = "#FFF" }
+theme.ok = { fg = "#fff", bg = "#FFF" }      -- Change back first to #000 for black in pattern searches
 theme.warn = { fg = "#F00", bg = "#FFF" }
-theme.error = { fg = "#FFF", bg = "#F00" }
+theme.error = { fg = "#DB0", bg = "#F00" }   -- Change back first to #FFF for white in pattern searches
 
 return theme
 
