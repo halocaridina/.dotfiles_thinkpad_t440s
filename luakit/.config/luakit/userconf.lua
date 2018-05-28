@@ -3,12 +3,12 @@ local settings = require "settings"
 
 settings.window.home_page                             = "about:blank"
 settings.window.scroll_step                           = 60
-settings.window.zoom_step                             = 0.2
-settings.window.new_window_size                       = "1366x768"
+settings.window.zoom_step                             = 0.3
+settings.window.new_window_size                       = "1920x1080"
 settings.window.load_etc_hosts                        = false
 -- settings.vertical_tabs.sidebar_width                  = 200
 
-settings.webview.zoom_level                           = 120
+settings.webview.zoom_level                           = 150
 settings.webview.zoom_text_only                       = true
 settings.webview.enable_webgl                         = true
 
