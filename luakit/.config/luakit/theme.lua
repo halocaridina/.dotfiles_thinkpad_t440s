@@ -5,7 +5,7 @@
 local theme = {}
 
 -- Default settings
-theme.font = "18px Roboto Condensed, Regular"
+theme.font = "Roboto Condensed, Regular 18px"
 theme.fg   = "#000"
 theme.bg   = "#D3D3D3"
 

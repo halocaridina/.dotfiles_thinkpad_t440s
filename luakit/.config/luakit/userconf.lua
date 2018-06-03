@@ -3,12 +3,12 @@ local settings = require "settings"
 
 settings.window.home_page                             = "about:blank"
 settings.window.scroll_step                           = 60
-settings.window.zoom_step                             = 0.3
+settings.window.zoom_step                             = 0.2
 settings.window.new_window_size                       = "1920x1080"
 settings.window.load_etc_hosts                        = false
 -- settings.vertical_tabs.sidebar_width                  = 200
 
-settings.webview.zoom_level                           = 150
+settings.webview.zoom_level                           = 140
 settings.webview.zoom_text_only                       = true
 settings.webview.enable_webgl                         = true
 
@@ -25,3 +25,4 @@ settings.window.search_engines.ncbi                   = "https://www.ncbi.nlm.ni
 settings.window.search_engines.wikipedia              = "https://en.wikipedia.org/wiki/Special:Search?search=%s"
 
 settings.window.search_engines.default                = settings.window.search_engines.google
+
