@@ -9,7 +9,7 @@ settings.window.load_etc_hosts                        = false
 -- settings.vertical_tabs.sidebar_width                  = 200
 
 settings.webview.zoom_level                           = 140
-settings.webview.zoom_text_only                       = true
+settings.webview.zoom_text_only                       = false
 settings.webview.enable_webgl                         = true
 
 settings.on["youtube.com"].webview.enable_javascript  = true

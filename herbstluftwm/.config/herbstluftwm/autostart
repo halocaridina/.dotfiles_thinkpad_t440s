@@ -96,8 +96,11 @@ done
 hc load 9     '(clients max:0)'
 
 # cycle through tags
-hc keybind $Mod-period use_index +1 --skip-visible
-hc keybind $Mod-comma  use_index -1 --skip-visible
+#hc keybind $Mod-period use_index +1 --skip-visible
+#hc keybind $Mod-comma  use_index -1 --skip-visible
+hc keybind $Mod-comma spawn /home/srsantos/.config/herbstluftwm/scripts/tagswitch prev
+hc keybind $Mod-period spawn /home/srsantos/.config/herbstluftwm/scripts/tagswitch next
+
 
 # layouting
 hc keybind $Mod-r remove

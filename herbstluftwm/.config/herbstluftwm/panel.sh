@@ -12,7 +12,7 @@ x=${geometry[0]}
 y=${geometry[1]}
 panel_width=${geometry[2]}
 panel_height=18
-font="-xos4-terminus-medium-*-*-*-12-*-*-*-*-*-*-*"
+font="-xos4-terminus-medium-*-*-*-14-*-*-*-*-*-*-*"
 bgcolor='#1B1B1B'  ## use #222222 to match termite background
 selbg=$(hc get window_border_active_color)
 selfg='#FFFFFF'
@@ -81,8 +81,10 @@ hc pad $monitor $panel_height
     brightness=""
     vol_icon=""
     volume=""
-    power_state_icon=""
-    battery=""
+    power_state_icon1=""
+    power_state_icon0=""
+    battery0=""
+    battery1=""
     while true ; do
 
         ### Output ###
@@ -165,15 +167,25 @@ hc pad $monitor $panel_height
             volume=$(/usr/bin/pulseaudio-ctl full-status | awk '{print $1}' | sed -e 's/$/%/')
             vol_icon="^fg()^fn(DejaVuSansMono Nerd Font:style=Book:size=15)^fn()"
         fi
-        # Battery
-        battery=`acpi -b | awk '{print $3 $4 $5}' | sed -e 's/,/ /g' -e 's/^\([A-Z]\)[a-z]*/\1/;s/U/PWR/;s/D/BAT/;s/C/CHR/' -e 's/:[0-9][0-9]$//'`
-        power_state=`echo $battery | awk '{print $1}'`
-        if [ ${power_state} == "PWR" ]; then
-            power_state_icon="^fg()^fn(DejaVuSansMono Nerd Font:style=Book:size=13)^fn()"
-        elif [ ${power_state} == "CHR" ]; then
-            power_state_icon="^fg()^fg(#E5E500)^fn(DejaVuSansMono Nerd Font:style=Book:size=8)^fn()^fg(#E5E500)"
+        # Battery_0
+        battery0=`acpi -b | grep  "Battery 0" | awk '{print $3 $4 $5}' | sed -e 's/,/ /g' -e 's/^\([A-Z]\)[a-z]*/\1/;s/U/PWR/;s/D/BAT/;s/C/CHR/' -e 's/:[0-9][0-9]$//'`
+        power_state0=`echo $battery0 | awk '{print $1}'`
+        if [ ${power_state0} == "PWR" ]; then
+            power_state_icon0="^fg()^fn(DejaVuSansMono Nerd Font:style=Book:size=13)^fn()"
+        elif [ ${power_state0} == "CHR" ]; then
+            power_state_icon0="^fg()^fg(#E5E500)^fn(DejaVuSansMono Nerd Font:style=Book:size=8)^fn()^fg(#E5E500)"
         else
-            power_state_icon="^fg()^fg(#FFA500)^fn(DejaVuSansMono Nerd Font:style=Book:size=20)^fn()^fg(#FFA500)"
+            power_state_icon0="^fg()^fg(#FFA500)^fn(DejaVuSansMono Nerd Font:style=Book:size=20)^fn()^fg(#FFA500)"
+        fi
+        # Battery_1
+        battery1=`acpi -b | grep  "Battery 1" | awk '{print $3 $4 $5}' | sed -e 's/,/ /g' -e 's/^\([A-Z]\)[a-z]*/\1/;s/U/PWR/;s/D/BAT/;s/C/CHR/' -e 's/:[0-9][0-9]$//'`
+        power_state1=`echo $battery1 | awk '{print $1}'`
+        if [ ${power_state1} == "PWR" ]; then
+            power_state_icon1="^fg()^fn(DejaVuSansMono Nerd Font:style=Book:size=13)^fn()"
+        elif [ ${power_state1} == "CHR" ]; then
+            power_state_icon1="^fg()^fg(#E5E500)^fn(DejaVuSansMono Nerd Font:style=Book:size=8)^fn()^fg(#E5E500)"
+        else
+            power_state_icon1="^fg()^fg(#FFA500)^fn(DejaVuSansMono Nerd Font:style=Book:size=20)^fn()^fg(#FFA500)"
         fi
         # Brightness
         brightness=`/usr/bin/light -G | awk -F"." '{print $1}' | sed -e 's/$/%/'`
@@ -181,8 +193,8 @@ hc pad $monitor $panel_height
         # Separator
         right="$separator^bg($hintcolor)^fg(#efefef)"
         # Put together indicator portion of panel
-        if [ "$battery" != "/" ] ;then
-            right="$right $network_icon $separator $brightness_icon $brightness $separator $vol_icon $volume $separator $power_state_icon $battery $separator ^fg(#efefef)"
+        if [ "$battery1" != "/" ] ;then
+            right="$right $network_icon $separator $brightness_icon $brightness $separator $vol_icon $volume $separator $power_state_icon1 $battery1 $separator $power_state_icon0 $battery0 $separator ^fg(#efefef)"
         fi
         # Put together clock portion of panel
         clock_icon="^fn(DejaVuSansMono Nerd Font:style=Book:size=14)^fn()"
@@ -190,7 +202,7 @@ hc pad $monitor $panel_height
         right_text_only=$(echo -n "$right" | sed 's.\^[^(]*([^)]*)..g')
         # get width of right aligned text.. and add some space for offset..
         width=$($textwidth "$font" "$right_text_only")
-        offset=-26
+        offset=-75
         echo -n "^pa($(($panel_width - $width - $offset)))$right"
         echo
 
