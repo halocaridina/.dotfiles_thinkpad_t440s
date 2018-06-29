@@ -1,5 +1,5 @@
 # GENERAL BEHAVIORS
-set font "Roboto Condensed, Regular 18px"
+set font "xos4 Terminess Powerline 18px"
 set adjust-open width
 set scroll-wrap false
 set abort-clear-search true

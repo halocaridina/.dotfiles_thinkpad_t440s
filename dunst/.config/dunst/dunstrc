@@ -1,7 +1,7 @@
 [global]
     markup = yes
-    font = "Roboto Condensed, 12"
-    format = "<span font="Roboto Condensed, 14">%s</span>\n<span font="Roboto Condensed, 12">%b</span>"
+    font = "xos4 Terminess Powerline 18px"
+    format = "<span font="xos4 Terminess Powerline 24px">%s</span>\n<span font="xos4 Terminess Powerline 18px">%b</span>"
     alignment = center
 
     bounce_freq = 0

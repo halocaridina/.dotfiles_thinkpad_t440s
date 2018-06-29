@@ -53,7 +53,7 @@ configuration {
     background-color: @background;
     transparency:     "screenshot";
     border:           0px;
-    padding:          200px;
+    padding:          300px;
 }
 #mainbox {
     border:  0;
