@@ -6,7 +6,7 @@
 
     bounce_freq = 0
     follow = mouse
-    geometry = "440x5-8+30"
+    geometry = "0x5-8+30"
     horizontal_padding = 8
     idle_threshold = 120
     ignore_newline = no
@@ -22,9 +22,9 @@
     transparency = 5
     word_wrap = yes
 
-    icon_position = left
-    icon_path = /home/srsantos/.config/dunst/icons:/usr/share/icons/gnome-colors-common/scalable/status:/usr/share/icons/gnome-brave/scalable/status
-    max_icon_size = 72
+#    icon_position = left
+#    icon_path = /home/srsantos/.config/dunst/icons:/usr/share/icons/gnome-colors-common/scalable/status:/usr/share/icons/gnome-brave/scalable/status
+#    max_icon_size = 72
 
     frame_width = 1
     frame_color = "#323232"
