@@ -10,15 +10,16 @@ hc emit_hook reload
 
 # autostart programs
 /usr/bin/xcalib -d :0 /home/srsantos/.color/icc/Lenovo_Twist_s230u_IPS.icm &
-/usr/bin/setroot -z /home/srsantos/.i3/wallpapers/dark-metal-grids/dark-metal-grid-2.png &
+/usr/bin/setroot -z /home/srsantos/.i3/wallpapers/dark-metal-grids/dark-metal-grid-8.png &
 /usr/bin/xss-lock -- i3lock -f -i /home/srsantos/.i3/wallpapers/metal_grid_w_arch_lockscreen.png &
 
 if hc silent new_attr bool my_not_first_autostart ; then
     /usr/bin/xvisbell &
-#    /usr/bin/compton --config /home/srsantos/.config/compton/compton.conf &>/dev/null &
+    /usr/bin/compton -b --vsync opengl --paint-on-overlay
     /usr/local/bin/touchpad_toggle.sh &
     /usr/local/bin/toggle_xautolock.sh &
     /usr/bin/unclutter --timeout 10 --jitter 50 --exclude-root --ignore-scrolling --fork &
+    /usr/bin/opensc-notify &
 fi
 
 # remove all existing keybindings
@@ -41,7 +42,7 @@ hc keybind $Mod-Shift-w spawn weather_report_long.shw
 hc keybind $Mod-Shift-s spawn scratchpad.sh
 
 # Launch luakit
-hc keybind $Mod-b spawn /usr/bin/luakit
+hc keybind $Mod-b spawn /usr/local/bin/luakit_light.sh
 
 # Toggle panel
 hc keybind $Mod-Shift-b spawn herbstclient emit_hook togglehidepanel
@@ -98,9 +99,9 @@ hc load 9     '(clients max:0)'
 # cycle through tags
 #hc keybind $Mod-period use_index +1 --skip-visible
 #hc keybind $Mod-comma  use_index -1 --skip-visible
-hc keybind $Mod-comma spawn /home/srsantos/.config/herbstluftwm/scripts/tagswitch prev
-hc keybind $Mod-period spawn /home/srsantos/.config/herbstluftwm/scripts/tagswitch next
 
+hc keybind $Mod-comma spawn /home/srsantos/.dotfiles/herbstluftwm/.config/herbstluftwm/tagswitch prev
+hc keybind $Mod-period spawn /home/srsantos/.dotfiles/herbstluftwm/.config/herbstluftwm/tagswitch next
 
 # layouting
 hc keybind $Mod-r remove
@@ -141,15 +142,15 @@ hc keybind XF86MonBrightnessDown spawn /usr/bin/light -U 10
 # keybindings for various system hotkeys
 hc keybind XF86Sleep spawn /usr/bin/systemctl suspend
 hc keybind XF86ScreenSaver spawn /usr/bin/xset dpms force off
-hc keybind XF86Launch1 spawn /usr/local/bin/rofi_i3exit.sh
+hc keybind $Mod-Shift-e spawn /usr/local/bin/rofi_i3exit.sh
 hc keybind Print spawn /usr/bin/scrot '%Y-%m-%d-%T_$wx$h_scrot.png' -e 'mv $f ~/Pictures/screenshots/'
 
-# theme
+# theme (original blue = #396EB_4
 hc set always_show_frame 1
 hc set frame_border_active_color '#00CCCC'
-hc set frame_border_normal_color '#396EB4'
-hc set frame_bg_normal_color '#396EB4'
-hc set frame_bg_active_color '#396EB4'
+hc set frame_border_normal_color '#454749'
+hc set frame_bg_normal_color '#454749'
+hc set frame_bg_active_color '#454749'
 hc set frame_border_width 1
 hc set frame_bg_transparent 1
 hc set frame_transparent_width 1
@@ -162,7 +163,7 @@ hc set window_gap 4
 
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
-hc attr theme.active.color '#396EB4'
+hc attr theme.active.color '#454749'
 hc attr theme.normal.color '#454545'
 hc attr theme.urgent.color '#EF2929'
 hc attr theme.inner_width 1
@@ -171,8 +172,8 @@ hc attr theme.border_width 1
 hc attr theme.floating.border_width 1
 hc attr theme.floating.outer_width 1
 hc attr theme.floating.outer_color black
-hc attr theme.active.inner_color '#396EB4' ##'#007F7F'
-hc attr theme.active.outer_color '#396EB4'
+hc attr theme.active.inner_color '#454749' ##'#007F7F'
+hc attr theme.active.outer_color '#454749'
 hc attr theme.background_color '#141414'
 
 # rules
@@ -206,4 +207,3 @@ for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
     # start it on each monitor
     "$panel" $monitor &
 done
-

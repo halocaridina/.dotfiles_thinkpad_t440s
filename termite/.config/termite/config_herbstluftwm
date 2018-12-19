@@ -23,7 +23,7 @@ pseudo_transparency = false
 cursor_blink = on
 
 # "block", "underline" or "ibeam"
-cursor_shape = ibeam
+cursor_shape = bloack
 
 # $BROWSER is used by default
 browser = luakit

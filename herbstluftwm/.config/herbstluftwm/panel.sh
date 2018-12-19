@@ -82,9 +82,12 @@ hc pad $monitor $panel_height
     vol_icon=""
     volume=""
     power_state_icon1=""
+    battery1=""
     power_state_icon0=""
     battery0=""
-    battery1=""
+    temp=""
+    temp_color=""
+    temp_icon=""
     while true ; do
 
         ### Output ###
@@ -113,31 +116,31 @@ hc pad $monitor $panel_height
             esac
             case ${i:1} in
                 '1')
-                    icon="^fn(Droid Sans Japanese:size=11)一^fn()"
+                    icon="^fn(Droid Sans Japanese:size=13)一^fn()"
                     ;;
                 '2')
-                    icon="^fn(Droid Sans Japanese:size=11)二^fn()"
+                    icon="^fn(Droid Sans Japanese:size=13)二^fn()"
                     ;;
                 '3')
-                    icon="^fn(Droid Sans Japanese:size=11)三^fn()"
+                    icon="^fn(Droid Sans Japanese:size=13)三^fn()"
                     ;;
                 '4')
-                    icon="^fn(Droid Sans Japanese:size=11)四^fn()"
+                    icon="^fn(Droid Sans Japanese:size=13)四^fn()"
                     ;;
                 '5')
-                    icon="^fn(Droid Sans Japanese:size=11)五^fn()"
+                    icon="^fn(Droid Sans Japanese:size=13)五^fn()"
                     ;;
                 '6')
-                    icon="^fn(Droid Sans Japanese:size=11)六^fn()"
+                    icon="^fn(Droid Sans Japanese:size=13)六^fn()"
                     ;;
                 '7')
-                    icon="^fn(Droid Sans Japanese:size=11)七^fn()"
+                    icon="^fn(Droid Sans Japanese:size=13)七^fn()"
                     ;;
                 '8')
-                    icon="^fn()^fn(DejaVuSansMono Nerd Font:style=Book:size=14)^fn()"
+                    icon="^fn()^fn(DejaVuSansMono Nerd Font:style=Book:size=16)^fn()"
                     ;;
                 '9')
-                    icon="^fn()^fn(DejaVuSansMono Nerd Font:style=Book:size=14)^fn()"
+                    icon="^fn()^fn(DejaVuSansMono Nerd Font:style=Book:size=16)^fn()"
                     ;;
             esac
             # If tag is not empty, show it.
@@ -154,55 +157,63 @@ hc pad $monitor $panel_height
         # Network connectivity
         net_connection=`/usr/bin/ip route get 8.8.8.8 | head -1 | awk '{print $7}' 2> /dev/null`
         if [[ !  -z  $net_connection  ]]; then
-            network_icon="^fg()^fg(#8AE234)^fn(DejaVuSansMono Nerd Font:style=Book:size=15)^fn()^fg(#8AE234)"
+            network_icon="^fg()^fg(#8AE234)^fn(DejaVuSansMono Nerd Font:style=Book:size=17)^fn()^fg(#8AE234)"
         else
-            network_icon="^fg()^fg(#EF2929)^fn(DejaVuSansMono Nerd Font:style=Book:size=15)^fn()^fg(#EF2929)"
+            network_icon="^fg()^fg(#EF2929)^fn(DejaVuSansMono Nerd Font:style=Book:size=17)^fn()^fg(#EF2929)"
         fi
         # Volume
         mute=`/usr/bin/pulseaudio-ctl full-status | awk '{print $2}'`
         if [ ${mute} == "yes" ]; then
             volume="MUTE"
-            vol_icon="^fg()^fg(#EF2929)^fn(DejaVuSansMono Nerd Font:style=Book:size=15)^fn()^fg(#EF2929)"
+            vol_icon="^fg()^fg(#EF2929)^fn(DejaVuSansMono Nerd Font:style=Book:size=17)^fn()^fg(#EF2929)"
         else
             volume=$(/usr/bin/pulseaudio-ctl full-status | awk '{print $1}' | sed -e 's/$/%/')
-            vol_icon="^fg()^fn(DejaVuSansMono Nerd Font:style=Book:size=15)^fn()"
+            vol_icon="^fg()^fn(DejaVuSansMono Nerd Font:style=Book:size=17)^fn()"
         fi
-        # Battery_0
-        battery0=`acpi -b | grep  "Battery 0" | awk '{print $3 $4 $5}' | sed -e 's/,/ /g' -e 's/^\([A-Z]\)[a-z]*/\1/;s/U/PWR/;s/D/BAT/;s/C/CHR/' -e 's/:[0-9][0-9]$//'`
-        power_state0=`echo $battery0 | awk '{print $1}'`
-        if [ ${power_state0} == "PWR" ]; then
-            power_state_icon0="^fg()^fn(DejaVuSansMono Nerd Font:style=Book:size=13)^fn()"
-        elif [ ${power_state0} == "CHR" ]; then
-            power_state_icon0="^fg()^fg(#E5E500)^fn(DejaVuSansMono Nerd Font:style=Book:size=8)^fn()^fg(#E5E500)"
-        else
-            power_state_icon0="^fg()^fg(#FFA500)^fn(DejaVuSansMono Nerd Font:style=Book:size=20)^fn()^fg(#FFA500)"
-        fi
-        # Battery_1
-        battery1=`acpi -b | grep  "Battery 1" | awk '{print $3 $4 $5}' | sed -e 's/,/ /g' -e 's/^\([A-Z]\)[a-z]*/\1/;s/U/PWR/;s/D/BAT/;s/C/CHR/' -e 's/:[0-9][0-9]$//'`
+        # Battery 1
+        battery1=`acpi -b | grep "Battery 1" | awk '{print $3 $4 $5}' | sed -e 's/,/ /g' -e 's/^\([A-Z]\)[a-z]*/\1/;s/U/PWR/;s/D/BAT/;s/C/CHR/' -e 's/:[0-9][0-9]$//'`
         power_state1=`echo $battery1 | awk '{print $1}'`
         if [ ${power_state1} == "PWR" ]; then
-            power_state_icon1="^fg()^fn(DejaVuSansMono Nerd Font:style=Book:size=13)^fn()"
+            power_state_icon1="^fg()^fn(DejaVuSansMono Nerd Font:style=Book:size=15)^fn()"
         elif [ ${power_state1} == "CHR" ]; then
-            power_state_icon1="^fg()^fg(#E5E500)^fn(DejaVuSansMono Nerd Font:style=Book:size=8)^fn()^fg(#E5E500)"
+            power_state_icon1="^fg()^fg(#E5E500)^fn(DejaVuSansMono Nerd Font:style=Book:size=10)^fn()^fg(#E5E500)"
         else
-            power_state_icon1="^fg()^fg(#FFA500)^fn(DejaVuSansMono Nerd Font:style=Book:size=20)^fn()^fg(#FFA500)"
+            power_state_icon1="^fg()^fg(#FFA500)^fn(DejaVuSansMono Nerd Font:style=Book:size=22)^fn()^fg(#FFA500)"
+        fi
+        # Battery 0
+        battery0=`acpi -b | grep "Battery 0" | awk '{print $3 $4 $5}' | sed -e 's/,/ /g' -e 's/^\([A-Z]\)[a-z]*/\1/;s/U/PWR/;s/D/BAT/;s/C/CHR/' -e 's/:[0-9][0-9]$//'`
+        power_state0=`echo $battery0 | awk '{print $1}'`
+        if [ ${power_state0} == "PWR" ]; then
+            power_state_icon0="^fg()^fn(DejaVuSansMono Nerd Font:style=Book:size=15)^fn()"
+        elif [ ${power_state0} == "CHR" ]; then
+            power_state_icon0="^fg()^fg(#E5E500)^fn(DejaVuSansMono Nerd Font:style=Book:size=10)^fn()^fg(#E5E500)"
+        else
+            power_state_icon0="^fg()^fg(#FFA500)^fn(DejaVuSansMono Nerd Font:style=Book:size=22)^fn()^fg(#FFA500)"
+        fi
+        # Temperature
+        temp=`sensors | awk '/temp1/{print $2}'`
+        temp_color=`acpi -t | awk '{print $4}' | awk -F"." '{print $1}'`
+        if [ ${temp_color} -ge 64 ]; then
+            temp_icon="^fg()^fg(#EF2929)^fn(DejaVuSansMono Nerd Font:style=Book:size=9)^fn()^fg(#EF2929)"
+        else
+            temp_icon="^fg()^fn(DejaVuSansMono Nerd Font:style=Book:size=11)^fn()"
         fi
         # Brightness
         brightness=`/usr/bin/light -G | awk -F"." '{print $1}' | sed -e 's/$/%/'`
-        brightness_icon="^fg()^fn(DejaVuSansMono Nerd Font:style=Book:size=9)^fn()"
+        brightness_icon="^fg()^fn(DejaVuSansMono Nerd Font:style=Book:size=11)^fn()"
         # Separator
         right="$separator^bg($hintcolor)^fg(#efefef)"
         # Put together indicator portion of panel
-        if [ "$battery1" != "/" ] ;then
-            right="$right $network_icon $separator $brightness_icon $brightness $separator $vol_icon $volume $separator $power_state_icon1 $battery1 $separator $power_state_icon0 $battery0 $separator ^fg(#efefef)"
+        if [ "$battery" != "/" ] ;then
+            right="$right $network_icon $separator $brightness_icon $brightness $separator $vol_icon $volume $separator $temp_icon $temp $separator $power_state_icon1 $battery1 $separator $power_state_icon0 $battery0 $separator ^fg(#efefef)"
         fi
         # Put together clock portion of panel
-        clock_icon="^fn(DejaVuSansMono Nerd Font:style=Book:size=14)^fn()"
+        clock_icon="^fn(DejaVuSansMono Nerd Font:style=Book:size=16)^fn()"
         right="$right $separator^fg() $clock_icon $date $separator"
         right_text_only=$(echo -n "$right" | sed 's.\^[^(]*([^)]*)..g')
         # get width of right aligned text.. and add some space for offset..
         width=$($textwidth "$font" "$right_text_only")
-        offset=-75
+        offset=-85
         echo -n "^pa($(($panel_width - $width - $offset)))$right"
         echo
 
