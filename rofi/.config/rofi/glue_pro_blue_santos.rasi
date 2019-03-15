@@ -35,7 +35,7 @@
     active-background:           rgba ( 57, 57, 57, 100 % );
     selected-active-background:  rgba ( 57, 120, 180, 100 % );
 }
-configuration {
+#configuration {
 
     // The display name of this browser
     display-ssh:                    "";
