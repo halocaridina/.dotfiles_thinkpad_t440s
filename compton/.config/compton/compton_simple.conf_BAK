@@ -12,28 +12,17 @@ backend = "glx";
 #
 #################################
 
-##### menu-opacity = 0.90;
+menu-opacity = 0.90;
 inactive-opacity = 0.55;
 active-opacity = 1;
-frame-opacity = 0.90;
+frame-opacity = 0.85;
 inactive-opacity-override = false;
-##### alpha-step = 0.06;
-
-blur-background = true;
-blur-background-frame = true;
-blur-strength = 4;
-blur-method = "kawase";
-##### blur-kern = "7x7box";
-blur-background-exclude = [
-	"window_type = 'dock'",
-	"window_type = 'desktop'",
-	"_GTK_FRAME_EXTENTS@:c"
-];
+alpha-step = 0.06;
 
 opacity-rule = [
    "0:_NET_WM_STATE@:32a *= '_NET_WM_STATE_HIDDEN'",
    "99:class_g = 'Lxappearance'",
-   "97:class_g *?= 'Rofi'"
+   "99:class_g ?= 'Soffice'"
 ];
 
 shadow-exclude = [
@@ -88,7 +77,7 @@ focus-exclude = [
     "name *= 'Network Connections'",
     "name *= 'Unlock Login Keyring'",
     "name *= 'Guvcview'",
-    "_NET_WM_NAME@:s = 'Rofi'"
+    "_NET_WM_NAME@:s = 'rofi'"
 ];
 
 #################################
@@ -101,7 +90,7 @@ refresh-rate = 0;
 vsync = "opengl-swc";
 unredir-if-possible = true;
 dbe = false;
-paint-on-overlay = false;
+paint-on-overlay = true;
 sw-opti = false;
 
 mark-wmwin-focused = true;
@@ -170,38 +159,5 @@ wintypes:
         # focus: Whether to always consider windows of this type focused.
         focus = true;
     };
-    menu =
-    {
-        # fade: Fade the particular type of windows.
-        fade = false;
-        # shadow: Give those windows shadow
-        shadow = false;
-        # opacity: Default opacity for the type of windows.
-        opacity = 0.90;
-        # focus: Whether to always consider windows of this type focused.
-        focus = true;
-    };
-    popup_menu =
-    {
-        # fade: Fade the particular type of windows.
-        fade = false;
-        # shadow: Give those windows shadow
-        shadow = false;
-        # opacity: Default opacity for the type of windows.
-        opacity = 0.90;
-        # focus: Whether to always consider windows of this type focused.
-        focus = true;
-    };
-    dropdown_menu =
-    {
-        # fade: Fade the particular type of windows.
-        fade = false;
-        # shadow: Give those windows shadow
-        shadow = false;
-        # opacity: Default opacity for the type of windows.
-        opacity = 0.90;
-        # focus: Whether to always consider windows of this type focused.
-        focus = true;
-    };
-}
-;
+};
+
