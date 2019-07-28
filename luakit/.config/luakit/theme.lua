@@ -5,7 +5,7 @@
 local theme = {}
 
 -- Default settings
-theme.font = "xos4 Terminess Powerline 18px"
+theme.font = "PragmataPro for Powerline 16"
 theme.fg   = "#000"
 theme.bg   = "#D3D3D3"
 
