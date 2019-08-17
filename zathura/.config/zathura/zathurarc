@@ -1,5 +1,5 @@
 # GENERAL BEHAVIORS
-set font "PragmataPro for Powerline 12"
+set font "Roboto Mono for Powerline 10"
 set adjust-open width
 set scroll-wrap false
 set abort-clear-search true

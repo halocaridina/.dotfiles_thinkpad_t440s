@@ -8,7 +8,7 @@ settings.window.new_window_size                       = "1920x1080"
 settings.window.load_etc_hosts                        = false
 -- settings.vertical_tabs.sidebar_width                  = 200
 
-settings.webview.zoom_level                           = 150
+settings.webview.zoom_level                           = 140
 settings.webview.zoom_text_only                       = false
 settings.webview.enable_webgl                         = true
 
