@@ -76,6 +76,16 @@ theme.private_tab_bg          = "#22254a"
 theme.trust_fg          = "#009900"
 theme.notrust_fg        = "#990000"
 
+-- Follow mode hints
+theme.hint_font = "12px monospace, courier, sans-serif"
+theme.hint_fg = "#fff"
+theme.hint_bg = "#CC0000"
+theme.hint_border = "1px dashed #000"
+theme.hint_overlay_bg = "rgba(255,255,153,0.3)"
+theme.hint_overlay_border = "1px dotted #000"
+theme.hint_overlay_selected_bg = "rgba(0,255,0,0.3)"
+theme.hint_overlay_selected_border = theme.hint_overlay_border
+
 -- General colour pairings
 theme.ok = { fg = "#fff", bg = "#FFF" }      -- Change back first to #000 for black in pattern searches
 theme.warn = { fg = "#F00", bg = "#FFF" }
