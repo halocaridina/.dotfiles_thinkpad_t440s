@@ -1,0 +1,20 @@
+#CONFIG#
+mountpath=/home/srsantos/Documents/Remote_FS:
+editor=vim:
+#PROFILES#
+#After each heading you must put an '=' and after each value you must put a ':'
+#Available headings:
+# location: this is the name of the profile (required)
+# login: the name of the user to login as (required)
+# ip: the url or ip of the server (required, ipv6 addresses must be surrounded in [ and ])
+# port: the port the ssh daemon is running on (required, the default port used by most daemons is 22)
+# path: the remote directory to use as the highest level of the mounted share (required, mount only)
+# mntopts: sshfs mount options exactly as they'd appear following the -o option (optional, mount only)
+#Example:
+# location=name:login=username:ip=address:port=22:path=/basepath/of/mount:mntopts=uid=99,gid=99:
+location=ASC:login=aubsrs:ip=dmc.asc.edu:port=22:path=/home/aubsrs:mntopts=uid=1000,gid=1000:
+location=Cyberdyne:login=srsantos:ip=cyberdyne:port=22:path=/home/srsantos:mntopts=uid=1000,gid=1000:
+location=Office_Intel:login=srsantos:ip=office_intel:port=22:path=/Users/srsantos:mntopts=uid=1000,gid=1000:
+location=SkyNet:login=srsantos:ip=skynet:port=22:path=/home/srsantos:mntopts=uid=1000,gid=1000:
+location=Ubuntu_Server:login=srsantos:ip=ubuntu_server:port=22:path=/home/srsantos:mntopts=uid=1000,gid=1000:
+

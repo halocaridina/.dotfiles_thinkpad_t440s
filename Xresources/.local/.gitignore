@@ -9,3 +9,5 @@ share/xorg/*
 share/applications/*
 share/luakit-back-ovfs/*
 share/luakit-backup/*
+state
+state/*
