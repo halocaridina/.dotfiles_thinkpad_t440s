@@ -12,7 +12,7 @@ x=${geometry[0]}
 y=${geometry[1]}
 panel_width=${geometry[2]}
 panel_height=18
-font="-xos4-terminus-medium-*-*-*-14-*-*-*-*-*-*-*"
+font="Roboto Mono for Powerline:style=Regular:size=10"
 bgcolor='#1B1B1B'  ## use #222222 to match termite background
 selbg=$(hc get window_border_active_color)
 selfg='#FFFFFF'

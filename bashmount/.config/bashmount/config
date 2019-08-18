@@ -120,7 +120,7 @@ run_post_mount='1'
 #}
 
 post_mount() {
-   /usr/bin/notify-send -u low 'Media Mounted' 'Now accessible.' -i /usr/share/icons/gnome/256x256/devices/media-removable.png
+   /usr/bin/notify-send -u low 'Media Mounted' 'Now accessible.'
 }
 
 # Set "run_post_unmount" to '0' to disable or '1' to enable.
@@ -137,5 +137,5 @@ run_post_unmount='1'
 #}
 
 post_unmount() {
-   /usr/bin/notify-send -u low 'Media Unmounted' 'Can be safely removed.' -i /usr/share/icons/gnome/256x256/devices/media-removable.png
+   /usr/bin/notify-send -u low 'Media Unmounted' 'Can be safely removed.'
 }

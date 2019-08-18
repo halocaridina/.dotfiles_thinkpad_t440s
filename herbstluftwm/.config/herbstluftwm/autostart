@@ -9,7 +9,7 @@ hc pad 0 18 0 0 0
 hc emit_hook reload
 
 # autostart programs
-/usr/bin/xcalib -d :0 /home/srsantos/.color/icc/Lenovo_Twist_s230u_IPS.icm &
+#/usr/bin/xcalib -d :0 /home/srsantos/.color/icc/Lenovo_Twist_s230u_IPS.icm &
 /usr/bin/setroot -z /home/srsantos/.i3/wallpapers/dark-metal-grids/dark-metal-grid-8.png &
 /usr/bin/xss-lock -- i3lock -f -i /home/srsantos/.i3/wallpapers/metal_grid_w_arch_lockscreen.png &
 
