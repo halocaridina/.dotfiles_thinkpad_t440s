@@ -28,7 +28,7 @@ Plugin 'scrooloose/nerdtree'
 
 Plugin 'Lokaltog/vim-easymotion'
 
-Plugin 'sjl/gundo.vim'
+"' Plugin 'sjl/gundo.vim'
 
 Plugin 'SearchComplete'
 
