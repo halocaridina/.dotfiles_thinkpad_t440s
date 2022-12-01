@@ -55,6 +55,7 @@ if [[ -n $SSH_CONNECTION ]]; then
 export PATH=/opt/edirect:$HOME/.bin:/usr/local/bin:$PATH
 export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
+export LIBVA_DRIVER_NAME=i965
 
 ## Enable color support of ls and file types
 if [ "$TERM" != "dumb" ]; then

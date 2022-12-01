@@ -1,7 +1,7 @@
 ! Set cursor theme for system
 
 Xcursor.theme: Bluecurve
-Xcursor.size:  36
+Xcursor.size:  24
 
 ! Xft font settings
 

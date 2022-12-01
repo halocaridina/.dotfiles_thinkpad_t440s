@@ -4,6 +4,11 @@
  * Copyright: Rasmus Steinke
 ******************************************************************************/
 
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
 * {
     selected-normal-foreground:  rgba ( 255, 255, 255, 100 % );
     foreground:                  rgba ( 255, 255, 255, 100 % );
