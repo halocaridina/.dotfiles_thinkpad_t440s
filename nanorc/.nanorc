@@ -30,7 +30,7 @@ set noconvert
 set speller "aspell -c"
 
 ## Allow nano to be suspended with ^Z
-set suspend
+## set suspend
 
 ## For DNA sequence in FASTA format
 syntax "fasta" "\.fasta$" "\.fas$"

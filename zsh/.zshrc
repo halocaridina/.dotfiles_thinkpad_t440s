@@ -121,7 +121,7 @@ alias battery_level='cat /sys/class/power_supply/BAT0/uevent | grep POWER_SUPPLY
 alias i3_exit='i3-msg exit'
 alias sys-info='inxi -Fxz'
 alias screenfetch='neofetch'
-alias nano='vim'
+### alias nano='vim'
 alias less='less -e -i -M -R -q'
 alias sm_readers_ls='opensc-tool -l'
 
