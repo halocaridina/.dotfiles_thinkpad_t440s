@@ -91,3 +91,4 @@
 [Audacious]
     appname = Audacious
     format = "<span font="Roboto Mono for Powerline 17">%s</span>\n<span font="Roboto Mono for Powerline 13">%b</span>"
+
