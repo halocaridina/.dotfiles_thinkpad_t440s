@@ -12,11 +12,15 @@ settings.webview.zoom_level                           = 140
 settings.webview.zoom_text_only                       = false
 settings.webview.enable_webgl                         = true
 
+settings.webview.hardware_acceleration_policy         = "always"
+
+settings.webview.enable_smooth_scrolling              = true
+
 settings.on["youtube.com"].webview.enable_javascript  = true
 settings.on["youtube.com"].webview.enable_plugins     = true
 
 settings.window.search_engines.archwiki               = "https://wiki.archlinux.org/?search=%s"
-settings.window.search_engines.aur                    = "https://aur.archlinux.org/packages.php?O=0&K=%s&do_Search=Go"
+settings.window.search_engines.aur                    = "https://aur.archlinux.org/packages?O=0&K=%s&do_Search=Go"
 settings.window.search_engines.duckduckgo             = "https://duckduckgo.com/?q=%s"
 settings.window.search_engines.github                 = "https://github.com/search?q=%s"
 settings.window.search_engines.google                 = "https://google.com/search?q=%s"
