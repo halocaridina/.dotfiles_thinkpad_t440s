@@ -1,18 +1,15 @@
 configuration {
-	font: "Roboto Mono for Powerline Regular 14";
-	bw: 0;
-	padding: 300;
-	fixed-num-lines: false;
-	terminal: "termite";
-	ssh-client: "ssh";
-	ssh-command: "{terminal} -e '{ssh-client} {host}' --class=ssh";
-	sidebar-mode: true;
-	separator-style: "dash";
-	hide-scrollbar: true;
-	fullscreen: true;
-	theme: "/home/srsantos/.config/rofi/glue_pro_blue_santos.rasi";
-	display-window: "";
-	display-run: "";
-	display-ssh: "";
-	display-combi: "";
+    modi:		     [window,run,ssh];
+    font:                    "Roboto Mono for Powerline Regular 14";
+    fixed-num-lines:         false;
+    show-icons:              false;
+    sidebar-mode:            true;
+    scroll-method:           0;
+    click-to-exit:           true;
+    combi-hide-mode-prefix:  false;
+    location:                0;
 }
+
+@theme "/home/srsantos/.config/rofi/glue_pro_blue_santos.rasi"
+
+//@theme "/home/srsantos/.config/rofi/sidebar_santos.rasi"

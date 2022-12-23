@@ -4,11 +4,6 @@
  * Copyright: Rasmus Steinke
 ******************************************************************************/
 
-element-text, element-icon {
-    background-color: inherit;
-    text-color:       inherit;
-}
-
 * {
     selected-normal-foreground:  rgba ( 255, 255, 255, 100 % );
     foreground:                  rgba ( 255, 255, 255, 100 % );
@@ -42,13 +37,14 @@ element-text, element-icon {
 }
 
 #configuration {
-    // The display name of this browser
+
+    // The display icon for SSH
     display-ssh:                    "";
-    // The display name of this browser
+    // The display icon for running an app
     display-run:                    "";
-    // The display name of this browser
+    // The display icon for running an app
     display-drun:                   "";
-    // The display name of this browser
+    // The display icons for windows
     display-window:                 "";
     display-combi:                  "";
     show-icons: false;
@@ -58,7 +54,9 @@ element-text, element-icon {
     background-color: @background;
     transparency:     "screenshot";
     border:           0px;
-    padding:          300px;
+    padding:          180px;
+    width:            100%;
+    height:           100%;
 }
 #mainbox {
     border:  0;
@@ -161,4 +159,9 @@ element-text, element-icon {
     str:        ":";
     margin:     0px 0.3em 0em 0em ;
     text-color: @normal-foreground;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
 }
