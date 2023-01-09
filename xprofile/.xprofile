@@ -23,5 +23,5 @@ fi
 /usr/bin/xautolock -time 30 -locker "systemctl suspend" -detectsleep &
 
 # Enable screen locking no matter the wm
-/usr/bin/xss-lock -- /usr/bin/i3lock -b -f -i /home/srsantos/.i3/wallpapers/Black_Burst_Info_1920x1080.png &
+/usr/bin/xss-lock -- /usr/bin/i3lock -b -f -i /home/srsantos/.i3/wallpapers/dark-metal-grids/dark-metal-grid-8_1920x1080.png &
 #/usr/bin/xss-lock -- /usr/bin/i3lock-fancy -f Terminus-\(TTF\)-Bold -t "Hello Scott, waiting for your fingerprint..." &
